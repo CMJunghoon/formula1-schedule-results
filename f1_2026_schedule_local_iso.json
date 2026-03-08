@@ -1,0 +1,1595 @@
+{
+  "season": 2026,
+  "calendar_url": "https://www.formula1.com/en/racing/2026",
+  "datetime_format": "local ISO 8601 without timezone offset",
+  "events": [
+    {
+      "round": null,
+      "event_type": "testing",
+      "title": "FORMULA 1 ARAMCO PRE-SEASON TESTING 1 2026",
+      "country": "Bahrain",
+      "date_range_text": "11 - 13 Feb",
+      "start_date_local": "2026-02-11T00:00:00",
+      "end_date_local": "2026-02-13T23:59:59",
+      "event_url": "https://www.formula1.com/en/racing/2026/pre-season-testing-1",
+      "sessions": []
+    },
+    {
+      "round": null,
+      "event_type": "testing",
+      "title": "FORMULA 1 ARAMCO PRE-SEASON TESTING 2 2026",
+      "country": "Bahrain",
+      "date_range_text": "18 - 20 Feb",
+      "start_date_local": "2026-02-18T00:00:00",
+      "end_date_local": "2026-02-20T23:59:59",
+      "event_url": "https://www.formula1.com/en/racing/2026/pre-season-testing-2",
+      "sessions": []
+    },
+    {
+      "round": 1,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 QATAR AIRWAYS AUSTRALIAN GRAND PRIX 2026",
+      "country": "Australia",
+      "date_range_text": "06 - 08 MAR",
+      "start_date_local": "2026-03-06T01:30:00",
+      "end_date_local": "2026-03-08T06:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/australia",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-03-06T01:30:00",
+          "end_datetime_local": "2026-03-06T02:30:00",
+          "results": [
+            {
+              "pos": "1",
+              "driver": "Charles Leclerc",
+              "team": "Ferrari",
+              "time_gap": "1:20.267"
+            },
+            {
+              "pos": "2",
+              "driver": "Lewis Hamilton",
+              "team": "Ferrari",
+              "time_gap": "+0.469s"
+            },
+            {
+              "pos": "3",
+              "driver": "Max Verstappen",
+              "team": "Red Bull Racing",
+              "time_gap": "+0.522s"
+            },
+            {
+              "pos": "4",
+              "driver": "Isack Hadjar",
+              "team": "Red Bull Racing",
+              "time_gap": "+0.820s"
+            },
+            {
+              "pos": "5",
+              "driver": "Arvid Lindblad",
+              "team": "Racing Bulls",
+              "time_gap": "+1.046s"
+            },
+            {
+              "pos": "6",
+              "driver": "Oscar Piastri",
+              "team": "McLaren",
+              "time_gap": "+1.075s"
+            },
+            {
+              "pos": "7",
+              "driver": "George Russell",
+              "team": "Mercedes",
+              "time_gap": "+1.104s"
+            },
+            {
+              "pos": "8",
+              "driver": "Kimi Antonelli",
+              "team": "Mercedes",
+              "time_gap": "+1.109s"
+            },
+            {
+              "pos": "9",
+              "driver": "Gabriel Bortoleto",
+              "team": "Audi",
+              "time_gap": "+1.429s"
+            },
+            {
+              "pos": "10",
+              "driver": "Nico Hulkenberg",
+              "team": "Audi",
+              "time_gap": "+1.702s"
+            },
+            {
+              "pos": "11",
+              "driver": "Esteban Ocon",
+              "team": "Haas F1 Team",
+              "time_gap": "+1.894s"
+            },
+            {
+              "pos": "12",
+              "driver": "Carlos Sainz",
+              "team": "Williams",
+              "time_gap": "+2.056s"
+            },
+            {
+              "pos": "13",
+              "driver": "Liam Lawson",
+              "team": "Racing Bulls",
+              "time_gap": "+2.346s"
+            },
+            {
+              "pos": "14",
+              "driver": "Oliver Bearman",
+              "team": "Haas F1 Team",
+              "time_gap": "+2.415s"
+            },
+            {
+              "pos": "15",
+              "driver": "Alexander Albon",
+              "team": "Williams",
+              "time_gap": "+2.863s"
+            },
+            {
+              "pos": "16",
+              "driver": "Franco Colapinto",
+              "team": "Alpine",
+              "time_gap": "+3.058s"
+            },
+            {
+              "pos": "17",
+              "driver": "Valtteri Bottas",
+              "team": "Cadillac",
+              "time_gap": "+3.755s"
+            },
+            {
+              "pos": "18",
+              "driver": "Pierre Gasly",
+              "team": "Alpine",
+              "time_gap": "+3.768s"
+            },
+            {
+              "pos": "19",
+              "driver": "Lando Norris",
+              "team": "McLaren",
+              "time_gap": "+4.124s"
+            },
+            {
+              "pos": "20",
+              "driver": "Sergio Perez",
+              "team": "Cadillac",
+              "time_gap": "+4.353s"
+            },
+            {
+              "pos": "21",
+              "driver": "Lance Stroll",
+              "team": "Aston Martin",
+              "time_gap": "+30.067s"
+            }
+          ]
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-03-06T05:00:00",
+          "end_datetime_local": "2026-03-06T06:00:00",
+          "results": [
+            {
+              "pos": "1",
+              "driver": "Oscar Piastri",
+              "team": "McLaren",
+              "time_gap": "1:19.729"
+            },
+            {
+              "pos": "2",
+              "driver": "Kimi Antonelli",
+              "team": "Mercedes",
+              "time_gap": "+0.214s"
+            },
+            {
+              "pos": "3",
+              "driver": "George Russell",
+              "team": "Mercedes",
+              "time_gap": "+0.320s"
+            },
+            {
+              "pos": "4",
+              "driver": "Lewis Hamilton",
+              "team": "Ferrari",
+              "time_gap": "+0.321s"
+            },
+            {
+              "pos": "5",
+              "driver": "Charles Leclerc",
+              "team": "Ferrari",
+              "time_gap": "+0.562s"
+            },
+            {
+              "pos": "6",
+              "driver": "Max Verstappen",
+              "team": "Red Bull Racing",
+              "time_gap": "+0.637s"
+            },
+            {
+              "pos": "7",
+              "driver": "Lando Norris",
+              "team": "McLaren",
+              "time_gap": "+1.065s"
+            },
+            {
+              "pos": "8",
+              "driver": "Arvid Lindblad",
+              "team": "Racing Bulls",
+              "time_gap": "+1.193s"
+            },
+            {
+              "pos": "9",
+              "driver": "Isack Hadjar",
+              "team": "Red Bull Racing",
+              "time_gap": "+1.212s"
+            },
+            {
+              "pos": "10",
+              "driver": "Esteban Ocon",
+              "team": "Haas F1 Team",
+              "time_gap": "+1.450s"
+            },
+            {
+              "pos": "11",
+              "driver": "Oliver Bearman",
+              "team": "Haas F1 Team",
+              "time_gap": "+1.597s"
+            },
+            {
+              "pos": "12",
+              "driver": "Nico Hulkenberg",
+              "team": "Audi",
+              "time_gap": "+1.622s"
+            },
+            {
+              "pos": "13",
+              "driver": "Liam Lawson",
+              "team": "Racing Bulls",
+              "time_gap": "+1.629s"
+            },
+            {
+              "pos": "14",
+              "driver": "Gabriel Bortoleto",
+              "team": "Audi",
+              "time_gap": "+1.939s"
+            },
+            {
+              "pos": "15",
+              "driver": "Alexander Albon",
+              "team": "Williams",
+              "time_gap": "+2.118s"
+            },
+            {
+              "pos": "16",
+              "driver": "Pierre Gasly",
+              "team": "Alpine",
+              "time_gap": "+2.438s"
+            },
+            {
+              "pos": "17",
+              "driver": "Carlos Sainz",
+              "team": "Williams",
+              "time_gap": "+2.524s"
+            },
+            {
+              "pos": "18",
+              "driver": "Franco Colapinto",
+              "team": "Alpine",
+              "time_gap": "+2.890s"
+            },
+            {
+              "pos": "19",
+              "driver": "Valtteri Bottas",
+              "team": "Cadillac",
+              "time_gap": "+3.931s"
+            },
+            {
+              "pos": "20",
+              "driver": "Fernando Alonso",
+              "team": "Aston Martin",
+              "time_gap": "+4.933s"
+            },
+            {
+              "pos": "21",
+              "driver": "Lance Stroll",
+              "team": "Aston Martin",
+              "time_gap": "+6.087s"
+            },
+            {
+              "pos": "22",
+              "driver": "Sergio Perez",
+              "team": "Cadillac",
+              "time_gap": ""
+            }
+          ]
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-03-07T01:30:00",
+          "end_datetime_local": "2026-03-07T02:30:00",
+          "results": [
+            {
+              "pos": "1",
+              "driver": "George Russell",
+              "team": "Mercedes",
+              "time_gap": "1:19.053"
+            },
+            {
+              "pos": "2",
+              "driver": "Lewis Hamilton",
+              "team": "Ferrari",
+              "time_gap": "+0.616s"
+            },
+            {
+              "pos": "3",
+              "driver": "Charles Leclerc",
+              "team": "Ferrari",
+              "time_gap": "+0.774s"
+            },
+            {
+              "pos": "4",
+              "driver": "Oscar Piastri",
+              "team": "McLaren",
+              "time_gap": "+1.034s"
+            },
+            {
+              "pos": "5",
+              "driver": "Isack Hadjar",
+              "team": "Red Bull Racing",
+              "time_gap": "+1.084s"
+            },
+            {
+              "pos": "6",
+              "driver": "Max Verstappen",
+              "team": "Red Bull Racing",
+              "time_gap": "+1.144s"
+            },
+            {
+              "pos": "7",
+              "driver": "Kimi Antonelli",
+              "team": "Mercedes",
+              "time_gap": "+1.271s"
+            },
+            {
+              "pos": "8",
+              "driver": "Lando Norris",
+              "team": "McLaren",
+              "time_gap": "+1.390s"
+            },
+            {
+              "pos": "9",
+              "driver": "Gabriel Bortoleto",
+              "team": "Audi",
+              "time_gap": "+1.406s"
+            },
+            {
+              "pos": "10",
+              "driver": "Oliver Bearman",
+              "team": "Haas F1 Team",
+              "time_gap": "+1.725s"
+            },
+            {
+              "pos": "11",
+              "driver": "Arvid Lindblad",
+              "team": "Racing Bulls",
+              "time_gap": "+1.785s"
+            },
+            {
+              "pos": "12",
+              "driver": "Liam Lawson",
+              "team": "Racing Bulls",
+              "time_gap": "+1.837s"
+            },
+            {
+              "pos": "13",
+              "driver": "Esteban Ocon",
+              "team": "Haas F1 Team",
+              "time_gap": "+1.930s"
+            },
+            {
+              "pos": "14",
+              "driver": "Nico Hulkenberg",
+              "team": "Audi",
+              "time_gap": "+2.014s"
+            },
+            {
+              "pos": "15",
+              "driver": "Pierre Gasly",
+              "team": "Alpine",
+              "time_gap": "+2.018s"
+            },
+            {
+              "pos": "16",
+              "driver": "Franco Colapinto",
+              "team": "Alpine",
+              "time_gap": "+2.360s"
+            },
+            {
+              "pos": "17",
+              "driver": "Alexander Albon",
+              "team": "Williams",
+              "time_gap": "+2.611s"
+            },
+            {
+              "pos": "18",
+              "driver": "Fernando Alonso",
+              "team": "Aston Martin",
+              "time_gap": "+3.667s"
+            },
+            {
+              "pos": "19",
+              "driver": "Valtteri Bottas",
+              "team": "Cadillac",
+              "time_gap": "+4.461s"
+            },
+            {
+              "pos": "20",
+              "driver": "Sergio Perez",
+              "team": "Cadillac",
+              "time_gap": "+5.344s"
+            },
+            {
+              "pos": "21",
+              "driver": "Carlos Sainz",
+              "team": "Williams",
+              "time_gap": ""
+            }
+          ]
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-03-07T05:00:00",
+          "end_datetime_local": "2026-03-07T06:00:00",
+          "results": [
+            {
+              "pos": "1",
+              "driver": "George Russell",
+              "team": "Mercedes",
+              "q1": "1:19.507",
+              "q2": "1:18.934",
+              "q3": "1:18.518"
+            },
+            {
+              "pos": "2",
+              "driver": "Kimi Antonelli",
+              "team": "Mercedes",
+              "q1": "1:20.120",
+              "q2": "1:19.435",
+              "q3": "1:18.811"
+            },
+            {
+              "pos": "3",
+              "driver": "Isack Hadjar",
+              "team": "Red Bull Racing",
+              "q1": "1:20.023",
+              "q2": "1:19.653",
+              "q3": "1:19.303"
+            },
+            {
+              "pos": "4",
+              "driver": "Charles Leclerc",
+              "team": "Ferrari",
+              "q1": "1:20.226",
+              "q2": "1:19.357",
+              "q3": "1:19.327"
+            },
+            {
+              "pos": "5",
+              "driver": "Oscar Piastri",
+              "team": "McLaren",
+              "q1": "1:19.664",
+              "q2": "1:19.525",
+              "q3": "1:19.380"
+            },
+            {
+              "pos": "6",
+              "driver": "Lando Norris",
+              "team": "McLaren",
+              "q1": "1:20.010",
+              "q2": "1:19.882",
+              "q3": "1:19.475"
+            },
+            {
+              "pos": "7",
+              "driver": "Lewis Hamilton",
+              "team": "Ferrari",
+              "q1": "1:19.811",
+              "q2": "1:19.921",
+              "q3": "1:19.478"
+            },
+            {
+              "pos": "8",
+              "driver": "Liam Lawson",
+              "team": "Racing Bulls",
+              "q1": "1:20.491",
+              "q2": "1:20.144",
+              "q3": "1:19.994"
+            },
+            {
+              "pos": "9",
+              "driver": "Arvid Lindblad",
+              "team": "Racing Bulls",
+              "q1": "1:20.409",
+              "q2": "1:19.971",
+              "q3": "1:21.247"
+            },
+            {
+              "pos": "10",
+              "driver": "Gabriel Bortoleto",
+              "team": "Audi",
+              "q1": "1:20.495",
+              "q2": "1:20.221",
+              "q3": ""
+            },
+            {
+              "pos": "11",
+              "driver": "Nico Hulkenberg",
+              "team": "Audi",
+              "q1": "1:21.024",
+              "q2": "1:20.303",
+              "q3": ""
+            },
+            {
+              "pos": "12",
+              "driver": "Oliver Bearman",
+              "team": "Haas F1 Team",
+              "q1": "1:21.247",
+              "q2": "1:20.311",
+              "q3": ""
+            },
+            {
+              "pos": "13",
+              "driver": "Esteban Ocon",
+              "team": "Haas F1 Team",
+              "q1": "1:20.759",
+              "q2": "1:20.491",
+              "q3": ""
+            },
+            {
+              "pos": "14",
+              "driver": "Pierre Gasly",
+              "team": "Alpine",
+              "q1": "1:21.138",
+              "q2": "1:20.501",
+              "q3": ""
+            },
+            {
+              "pos": "15",
+              "driver": "Alexander Albon",
+              "team": "Williams",
+              "q1": "1:21.051",
+              "q2": "1:20.941",
+              "q3": ""
+            },
+            {
+              "pos": "16",
+              "driver": "Franco Colapinto",
+              "team": "Alpine",
+              "q1": "1:21.200",
+              "q2": "1:21.270",
+              "q3": ""
+            },
+            {
+              "pos": "17",
+              "driver": "Fernando Alonso",
+              "team": "Aston Martin",
+              "q1": "1:21.969",
+              "q2": "",
+              "q3": ""
+            },
+            {
+              "pos": "18",
+              "driver": "Sergio Perez",
+              "team": "Cadillac",
+              "q1": "1:22.605",
+              "q2": "",
+              "q3": ""
+            },
+            {
+              "pos": "19",
+              "driver": "Valtteri Bottas",
+              "team": "Cadillac",
+              "q1": "1:23.244",
+              "q2": "",
+              "q3": ""
+            }
+          ]
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-03-08T04:00:00",
+          "end_datetime_local": "2026-03-08T06:00:00",
+          "results": [
+            {
+              "pos": "1",
+              "driver": "George Russell",
+              "team": "Mercedes",
+              "pts": "25"
+            },
+            {
+              "pos": "2",
+              "driver": "Kimi Antonelli",
+              "team": "Mercedes",
+              "pts": "18"
+            },
+            {
+              "pos": "3",
+              "driver": "Charles Leclerc",
+              "team": "Ferrari",
+              "pts": "15"
+            },
+            {
+              "pos": "4",
+              "driver": "Lewis Hamilton",
+              "team": "Ferrari",
+              "pts": "12"
+            },
+            {
+              "pos": "5",
+              "driver": "Lando Norris",
+              "team": "McLaren",
+              "pts": "10"
+            },
+            {
+              "pos": "6",
+              "driver": "Max Verstappen",
+              "team": "Red Bull Racing",
+              "pts": "8"
+            },
+            {
+              "pos": "7",
+              "driver": "Oliver Bearman",
+              "team": "Haas F1 Team",
+              "pts": "6"
+            },
+            {
+              "pos": "8",
+              "driver": "Arvid Lindblad",
+              "team": "Racing Bulls",
+              "pts": "4"
+            },
+            {
+              "pos": "9",
+              "driver": "Gabriel Bortoleto",
+              "team": "Audi",
+              "pts": "2"
+            },
+            {
+              "pos": "10",
+              "driver": "Pierre Gasly",
+              "team": "Alpine",
+              "pts": "1"
+            },
+            {
+              "pos": "11",
+              "driver": "Esteban Ocon",
+              "team": "Haas F1 Team",
+              "pts": "0"
+            },
+            {
+              "pos": "12",
+              "driver": "Alexander Albon",
+              "team": "Williams",
+              "pts": "0"
+            },
+            {
+              "pos": "13",
+              "driver": "Liam Lawson",
+              "team": "Racing Bulls",
+              "pts": "0"
+            },
+            {
+              "pos": "14",
+              "driver": "Franco Colapinto",
+              "team": "Alpine",
+              "pts": "0"
+            },
+            {
+              "pos": "15",
+              "driver": "Carlos Sainz",
+              "team": "Williams",
+              "pts": "0"
+            },
+            {
+              "pos": "16",
+              "driver": "Sergio Perez",
+              "team": "Cadillac",
+              "pts": "0"
+            },
+            {
+              "pos": "NC",
+              "driver": "Lance Stroll",
+              "team": "Aston Martin",
+              "pts": "0"
+            },
+            {
+              "pos": "NC",
+              "driver": "Fernando Alonso",
+              "team": "Aston Martin",
+              "pts": "0"
+            },
+            {
+              "pos": "NC",
+              "driver": "Valtteri Bottas",
+              "team": "Cadillac",
+              "pts": "0"
+            },
+            {
+              "pos": "NC",
+              "driver": "Isack Hadjar",
+              "team": "Red Bull Racing",
+              "pts": "0"
+            },
+            {
+              "pos": "NC",
+              "driver": "Oscar Piastri",
+              "team": "McLaren",
+              "pts": "0"
+            },
+            {
+              "pos": "NC",
+              "driver": "Nico Hulkenberg",
+              "team": "Audi",
+              "pts": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 HEINEKEN CHINESE GRAND PRIX 2026",
+      "country": "China",
+      "date_range_text": "13 - 15 MAR",
+      "start_date_local": "2026-03-13T03:30:00",
+      "end_date_local": "2026-03-15T09:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/china",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-03-13T03:30:00",
+          "end_datetime_local": "2026-03-13T04:30:00"
+        },
+        {
+          "session": "Sprint Qualifying",
+          "start_datetime_local": "2026-03-13T07:30:00",
+          "end_datetime_local": "2026-03-13T08:14:00"
+        },
+        {
+          "session": "Sprint",
+          "start_datetime_local": "2026-03-14T03:00:00",
+          "end_datetime_local": "2026-03-14T04:00:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-03-14T07:00:00",
+          "end_datetime_local": "2026-03-14T08:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-03-15T07:00:00",
+          "end_datetime_local": "2026-03-15T09:00:00"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 ARAMCO JAPANESE GRAND PRIX 2026",
+      "country": "Japan",
+      "date_range_text": "27 - 29 MAR",
+      "start_date_local": "2026-03-27T02:30:00",
+      "end_date_local": "2026-03-29T07:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/japan",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-03-27T02:30:00",
+          "end_datetime_local": "2026-03-27T03:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-03-27T06:00:00",
+          "end_datetime_local": "2026-03-27T07:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-03-28T02:30:00",
+          "end_datetime_local": "2026-03-28T03:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-03-28T06:00:00",
+          "end_datetime_local": "2026-03-28T07:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-03-29T05:00:00",
+          "end_datetime_local": "2026-03-29T07:00:00"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2026",
+      "country": "Bahrain",
+      "date_range_text": "10 - 12 APR",
+      "start_date_local": "2026-04-10T11:30:00",
+      "end_date_local": "2026-04-12T17:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/bahrain",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-04-10T11:30:00",
+          "end_datetime_local": "2026-04-10T12:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-04-10T15:00:00",
+          "end_datetime_local": "2026-04-10T16:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-04-11T12:30:00",
+          "end_datetime_local": "2026-04-11T13:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-04-11T16:00:00",
+          "end_datetime_local": "2026-04-11T17:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-04-12T15:00:00",
+          "end_datetime_local": "2026-04-12T17:00:00"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 STC SAUDI ARABIAN GRAND PRIX 2026",
+      "country": "Flag of Saudi Arabia",
+      "date_range_text": "17 - 19 Apr",
+      "start_date_local": "2026-04-17T13:30:00",
+      "end_date_local": "2026-04-19T19:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/saudi-arabia",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-04-17T13:30:00",
+          "end_datetime_local": "2026-04-17T14:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-04-17T17:00:00",
+          "end_datetime_local": "2026-04-17T18:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-04-18T13:30:00",
+          "end_datetime_local": "2026-04-18T14:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-04-18T17:00:00",
+          "end_datetime_local": "2026-04-18T18:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-04-19T17:00:00",
+          "end_datetime_local": "2026-04-19T19:00:00"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2026",
+      "country": "Flag of United States of America",
+      "date_range_text": "01 - 03 May",
+      "start_date_local": "2026-05-01T16:30:00",
+      "end_date_local": "2026-05-03T22:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/miami",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-05-01T16:30:00",
+          "end_datetime_local": "2026-05-01T17:30:00"
+        },
+        {
+          "session": "Sprint Qualifying",
+          "start_datetime_local": "2026-05-01T20:30:00",
+          "end_datetime_local": "2026-05-01T21:14:00"
+        },
+        {
+          "session": "Sprint",
+          "start_datetime_local": "2026-05-02T16:00:00",
+          "end_datetime_local": "2026-05-02T17:00:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-05-02T20:00:00",
+          "end_datetime_local": "2026-05-02T21:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-05-03T20:00:00",
+          "end_datetime_local": "2026-05-03T22:00:00"
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 LENOVO GRAND PRIX DU CANADA 2026",
+      "country": "Flag of Canada",
+      "date_range_text": "22 - 24 May",
+      "start_date_local": "2026-05-22T16:30:00",
+      "end_date_local": "2026-05-24T22:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/canada",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-05-22T16:30:00",
+          "end_datetime_local": "2026-05-22T17:30:00"
+        },
+        {
+          "session": "Sprint Qualifying",
+          "start_datetime_local": "2026-05-22T20:30:00",
+          "end_datetime_local": "2026-05-22T21:14:00"
+        },
+        {
+          "session": "Sprint",
+          "start_datetime_local": "2026-05-23T16:00:00",
+          "end_datetime_local": "2026-05-23T17:00:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-05-23T20:00:00",
+          "end_datetime_local": "2026-05-23T21:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-05-24T20:00:00",
+          "end_datetime_local": "2026-05-24T22:00:00"
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 LOUIS VUITTON GRAND PRIX DE MONACO 2026",
+      "country": "Flag of Monaco",
+      "date_range_text": "05 - 07 Jun",
+      "start_date_local": "2026-06-05T11:30:00",
+      "end_date_local": "2026-06-07T15:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/monaco",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-06-05T11:30:00",
+          "end_datetime_local": "2026-06-05T12:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-06-05T15:00:00",
+          "end_datetime_local": "2026-06-05T16:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-06-06T10:30:00",
+          "end_datetime_local": "2026-06-06T11:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-06-06T14:00:00",
+          "end_datetime_local": "2026-06-06T15:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-06-07T13:00:00",
+          "end_datetime_local": "2026-06-07T15:00:00"
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 MSC CRUISES GRAN PREMIO DE BARCELONA-CATALUNYA 2026",
+      "country": "Flag of Spain",
+      "date_range_text": "12 - 14 Jun",
+      "start_date_local": "2026-06-12T11:30:00",
+      "end_date_local": "2026-06-14T15:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/barcelona-catalunya",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-06-12T11:30:00",
+          "end_datetime_local": "2026-06-12T12:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-06-12T15:00:00",
+          "end_datetime_local": "2026-06-12T16:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-06-13T10:30:00",
+          "end_datetime_local": "2026-06-13T11:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-06-13T14:00:00",
+          "end_datetime_local": "2026-06-13T15:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-06-14T13:00:00",
+          "end_datetime_local": "2026-06-14T15:00:00"
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 LENOVO AUSTRIAN GRAND PRIX 2026",
+      "country": "Flag of Austria",
+      "date_range_text": "26 - 28 Jun",
+      "start_date_local": "2026-06-26T11:30:00",
+      "end_date_local": "2026-06-28T15:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/austria",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-06-26T11:30:00",
+          "end_datetime_local": "2026-06-26T12:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-06-26T15:00:00",
+          "end_datetime_local": "2026-06-26T16:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-06-27T10:30:00",
+          "end_datetime_local": "2026-06-27T11:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-06-27T14:00:00",
+          "end_datetime_local": "2026-06-27T15:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-06-28T13:00:00",
+          "end_datetime_local": "2026-06-28T15:00:00"
+        }
+      ]
+    },
+    {
+      "round": 11,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 PIRELLI BRITISH GRAND PRIX 2026",
+      "country": "Flag of Great Britain",
+      "date_range_text": "03 - 05 Jul",
+      "start_date_local": "2026-07-03T11:30:00",
+      "end_date_local": "2026-07-05T16:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/great-britain",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-07-03T11:30:00",
+          "end_datetime_local": "2026-07-03T12:30:00"
+        },
+        {
+          "session": "Sprint Qualifying",
+          "start_datetime_local": "2026-07-03T15:30:00",
+          "end_datetime_local": "2026-07-03T16:14:00"
+        },
+        {
+          "session": "Sprint",
+          "start_datetime_local": "2026-07-04T11:00:00",
+          "end_datetime_local": "2026-07-04T12:00:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-07-04T15:00:00",
+          "end_datetime_local": "2026-07-04T16:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-07-05T14:00:00",
+          "end_datetime_local": "2026-07-05T16:00:00"
+        }
+      ]
+    },
+    {
+      "round": 12,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 MOËT & CHANDON BELGIAN GRAND PRIX 2026",
+      "country": "Flag of Belgium",
+      "date_range_text": "17 - 19 Jul",
+      "start_date_local": "2026-07-17T11:30:00",
+      "end_date_local": "2026-07-19T15:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/belgium",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-07-17T11:30:00",
+          "end_datetime_local": "2026-07-17T12:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-07-17T15:00:00",
+          "end_datetime_local": "2026-07-17T16:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-07-18T10:30:00",
+          "end_datetime_local": "2026-07-18T11:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-07-18T14:00:00",
+          "end_datetime_local": "2026-07-18T15:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-07-19T13:00:00",
+          "end_datetime_local": "2026-07-19T15:00:00"
+        }
+      ]
+    },
+    {
+      "round": 13,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 AWS HUNGARIAN GRAND PRIX 2026",
+      "country": "Flag of Hungary",
+      "date_range_text": "24 - 26 Jul",
+      "start_date_local": "2026-07-24T11:30:00",
+      "end_date_local": "2026-07-26T15:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/hungary",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-07-24T11:30:00",
+          "end_datetime_local": "2026-07-24T12:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-07-24T15:00:00",
+          "end_datetime_local": "2026-07-24T16:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-07-25T10:30:00",
+          "end_datetime_local": "2026-07-25T11:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-07-25T14:00:00",
+          "end_datetime_local": "2026-07-25T15:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-07-26T13:00:00",
+          "end_datetime_local": "2026-07-26T15:00:00"
+        }
+      ]
+    },
+    {
+      "round": 14,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2026",
+      "country": "Flag of Netherlands",
+      "date_range_text": "21 - 23 Aug",
+      "start_date_local": "2026-08-21T10:30:00",
+      "end_date_local": "2026-08-23T15:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/netherlands",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-08-21T10:30:00",
+          "end_datetime_local": "2026-08-21T11:30:00"
+        },
+        {
+          "session": "Sprint Qualifying",
+          "start_datetime_local": "2026-08-21T14:30:00",
+          "end_datetime_local": "2026-08-21T15:14:00"
+        },
+        {
+          "session": "Sprint",
+          "start_datetime_local": "2026-08-22T10:00:00",
+          "end_datetime_local": "2026-08-22T11:00:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-08-22T14:00:00",
+          "end_datetime_local": "2026-08-22T15:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-08-23T13:00:00",
+          "end_datetime_local": "2026-08-23T15:00:00"
+        }
+      ]
+    },
+    {
+      "round": 15,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 PIRELLI GRAN PREMIO D’ITALIA 2026",
+      "country": "Flag of Italy",
+      "date_range_text": "04 - 06 Sep",
+      "start_date_local": "2026-09-04T10:30:00",
+      "end_date_local": "2026-09-06T15:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/italy",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-09-04T10:30:00",
+          "end_datetime_local": "2026-09-04T11:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-09-04T14:00:00",
+          "end_datetime_local": "2026-09-04T15:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-09-05T10:30:00",
+          "end_datetime_local": "2026-09-05T11:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-09-05T14:00:00",
+          "end_datetime_local": "2026-09-05T15:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-09-06T13:00:00",
+          "end_datetime_local": "2026-09-06T15:00:00"
+        }
+      ]
+    },
+    {
+      "round": 16,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 TAG HEUER GRAN PREMIO DE ESPAÑA 2026",
+      "country": "Flag of Spain",
+      "date_range_text": "11 - 13 Sep",
+      "start_date_local": "2026-09-11T11:30:00",
+      "end_date_local": "2026-09-13T15:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/spain",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-09-11T11:30:00",
+          "end_datetime_local": "2026-09-11T12:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-09-11T15:00:00",
+          "end_datetime_local": "2026-09-11T16:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-09-12T10:30:00",
+          "end_datetime_local": "2026-09-12T11:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-09-12T14:00:00",
+          "end_datetime_local": "2026-09-12T15:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-09-13T13:00:00",
+          "end_datetime_local": "2026-09-13T15:00:00"
+        }
+      ]
+    },
+    {
+      "round": 17,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 QATAR AIRWAYS AZERBAIJAN GRAND PRIX 2026",
+      "country": "Flag of Azerbaijan",
+      "date_range_text": "24 - 26 Sep",
+      "start_date_local": "2026-09-24T08:30:00",
+      "end_date_local": "2026-09-26T13:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/azerbaijan",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-09-24T08:30:00",
+          "end_datetime_local": "2026-09-24T09:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-09-24T12:00:00",
+          "end_datetime_local": "2026-09-24T13:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-09-25T08:30:00",
+          "end_datetime_local": "2026-09-25T09:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-09-25T12:00:00",
+          "end_datetime_local": "2026-09-25T13:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-09-26T11:00:00",
+          "end_datetime_local": "2026-09-26T13:00:00"
+        }
+      ]
+    },
+    {
+      "round": 18,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2026",
+      "country": "Flag of Singapore",
+      "date_range_text": "09 - 11 Oct",
+      "start_date_local": "2026-10-09T08:30:00",
+      "end_date_local": "2026-10-11T14:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/singapore",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-10-09T08:30:00",
+          "end_datetime_local": "2026-10-09T09:30:00"
+        },
+        {
+          "session": "Sprint Qualifying",
+          "start_datetime_local": "2026-10-09T12:30:00",
+          "end_datetime_local": "2026-10-09T13:14:00"
+        },
+        {
+          "session": "Sprint",
+          "start_datetime_local": "2026-10-10T09:00:00",
+          "end_datetime_local": "2026-10-10T10:00:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-10-10T13:00:00",
+          "end_datetime_local": "2026-10-10T14:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-10-11T12:00:00",
+          "end_datetime_local": "2026-10-11T14:00:00"
+        }
+      ]
+    },
+    {
+      "round": 19,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 MSC CRUISES UNITED STATES GRAND PRIX 2026",
+      "country": "Flag of United States of America",
+      "date_range_text": "23 - 25 Oct",
+      "start_date_local": "2026-10-23T17:30:00",
+      "end_date_local": "2026-10-25T22:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/united-states",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-10-23T17:30:00",
+          "end_datetime_local": "2026-10-23T18:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-10-23T21:00:00",
+          "end_datetime_local": "2026-10-23T22:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-10-24T17:30:00",
+          "end_datetime_local": "2026-10-24T18:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-10-24T21:00:00",
+          "end_datetime_local": "2026-10-24T22:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-10-25T20:00:00",
+          "end_datetime_local": "2026-10-25T22:00:00"
+        }
+      ]
+    },
+    {
+      "round": 20,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2026",
+      "country": "Flag of Mexico",
+      "date_range_text": "30 Oct - 01 Nov",
+      "start_date_local": "2026-10-30T18:30:00",
+      "end_date_local": "2026-11-01T22:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/mexico",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-10-30T18:30:00",
+          "end_datetime_local": "2026-10-30T19:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-10-30T22:00:00",
+          "end_datetime_local": "2026-10-30T23:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-10-31T17:30:00",
+          "end_datetime_local": "2026-10-31T18:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-10-31T21:00:00",
+          "end_datetime_local": "2026-10-31T22:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-11-01T20:00:00",
+          "end_datetime_local": "2026-11-01T22:00:00"
+        }
+      ]
+    },
+    {
+      "round": 21,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 MSC CRUISES GRANDE PRÊMIO DE SÃO PAULO 2026",
+      "country": "Flag of Brazil",
+      "date_range_text": "06 - 08 Nov",
+      "start_date_local": "2026-11-06T15:30:00",
+      "end_date_local": "2026-11-08T19:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/brazil",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-11-06T15:30:00",
+          "end_datetime_local": "2026-11-06T16:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-11-06T19:00:00",
+          "end_datetime_local": "2026-11-06T20:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-11-07T14:30:00",
+          "end_datetime_local": "2026-11-07T15:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-11-07T18:00:00",
+          "end_datetime_local": "2026-11-07T19:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-11-08T17:00:00",
+          "end_datetime_local": "2026-11-08T19:00:00"
+        }
+      ]
+    },
+    {
+      "round": 22,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX 2026",
+      "country": "Flag of United States of America",
+      "date_range_text": "19 - 21 Nov",
+      "start_date_local": "2026-11-20T00:30:00",
+      "end_date_local": "2026-11-22T06:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/las-vegas",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-11-20T00:30:00",
+          "end_datetime_local": "2026-11-20T01:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-11-20T04:00:00",
+          "end_datetime_local": "2026-11-20T05:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-11-21T00:30:00",
+          "end_datetime_local": "2026-11-21T01:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-11-21T04:00:00",
+          "end_datetime_local": "2026-11-21T05:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-11-22T04:00:00",
+          "end_datetime_local": "2026-11-22T06:00:00"
+        }
+      ]
+    },
+    {
+      "round": 23,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 QATAR AIRWAYS QATAR GRAND PRIX 2026",
+      "country": "Flag of Qatar",
+      "date_range_text": "27 - 29 Nov",
+      "start_date_local": "2026-11-27T13:30:00",
+      "end_date_local": "2026-11-29T18:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/qatar",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-11-27T13:30:00",
+          "end_datetime_local": "2026-11-27T14:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-11-27T17:00:00",
+          "end_datetime_local": "2026-11-27T18:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-11-28T14:30:00",
+          "end_datetime_local": "2026-11-28T15:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-11-28T18:00:00",
+          "end_datetime_local": "2026-11-28T19:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-11-29T16:00:00",
+          "end_datetime_local": "2026-11-29T18:00:00"
+        }
+      ]
+    },
+    {
+      "round": 24,
+      "event_type": "grand_prix",
+      "title": "FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2026",
+      "country": "Flag of United Arab Emirates",
+      "date_range_text": "04 - 06 Dec",
+      "start_date_local": "2026-12-04T09:30:00",
+      "end_date_local": "2026-12-06T15:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/united-arab-emirates",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-12-04T09:30:00",
+          "end_datetime_local": "2026-12-04T10:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-12-04T13:00:00",
+          "end_datetime_local": "2026-12-04T14:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-12-05T10:30:00",
+          "end_datetime_local": "2026-12-05T11:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-12-05T14:00:00",
+          "end_datetime_local": "2026-12-05T15:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-12-06T13:00:00",
+          "end_datetime_local": "2026-12-06T15:00:00"
+        }
+      ]
+    }
+  ]
+}

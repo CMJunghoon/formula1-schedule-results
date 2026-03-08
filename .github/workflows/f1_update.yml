@@ -1,0 +1,103 @@
+name: F1 Schedule Auto Update
+
+on:
+  schedule:
+    # ──────────────────────────────────────────────────────────────────────
+    # 레이스 주간(금·토·일) UTC 00:00~17:00 사이 30분 간격 실행
+    # KST 기준 09:00~02:00 커버 → F1 세션 대부분 포함
+    # ──────────────────────────────────────────────────────────────────────
+    - cron: '*/30 0-17 * * 5,6,0'   # 금/토/일 (UTC)
+
+  # 수동 실행 버튼 (GitHub → Actions 탭에서 트리거 가능)
+  workflow_dispatch:
+
+jobs:
+  update-schedule:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # JSON 커밋·푸시에 필요
+
+    steps:
+      # ── 1. 소스 체크아웃 ─────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Python 설치 ────────────────────────────────────────────────
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      # ── 3. 의존성 설치 ────────────────────────────────────────────────
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # ── 4. 세션 종료 후 30분 지났는지 확인 ───────────────────────────
+      #    아직 아무 세션도 끝나지 않았으면 스킵 (불필요한 스크래핑 방지)
+      - name: Check if any session ended within last 30 min
+        id: check
+        run: |
+          python3 - <<'EOF'
+          import json, sys
+          from datetime import datetime, timedelta, timezone
+          from pathlib import Path
+
+          JSON_PATH = Path("f1_2026_schedule_local_iso.json")
+          if not JSON_PATH.exists():
+              print("no_json=true")
+              sys.exit(0)
+
+          from zoneinfo import ZoneInfo
+          KST = ZoneInfo("Asia/Seoul")
+          now_utc = datetime.now(timezone.utc)
+
+          data = json.loads(JSON_PATH.read_text())
+          window_start = now_utc - timedelta(minutes=30)
+          window_end   = now_utc
+
+          found = False
+          for event in data.get("events", []):
+              for session in event.get("sessions", []):
+                  end_str = session.get("end_datetime_local")
+                  if not end_str:
+                      continue
+                  end_kst = datetime.fromisoformat(end_str).replace(tzinfo=KST)
+                  end_utc = end_kst.astimezone(timezone.utc)
+                  trigger = end_utc + timedelta(minutes=30)
+                  if window_start <= trigger <= window_end:
+                      print(f"✅ 트리거 세션: {event.get('title','?')} / {session.get('session','?')}")
+                      found = True
+                      break
+              if found:
+                  break
+
+          # GITHUB_OUTPUT 에 결과 기록
+          import os
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"should_run={'true' if found else 'false'}\n")
+          EOF
+
+      # ── 5. F1 스크래퍼 실행 (세션 종료 후 30분 윈도우에 해당할 때만) ─
+      - name: Run F1 scraper
+        if: steps.check.outputs.should_run == 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          echo "🏎️ 스크래핑 시작: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          python3 2026_F1_SC.py
+          echo "✅ 완료"
+
+      # ── 6. JSON 변경 시 자동 커밋·푸시 ──────────────────────────────
+      - name: Commit & Push updated JSON
+        if: steps.check.outputs.should_run == 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add f1_2026_schedule_local_iso.json
+          # 변경이 있을 때만 커밋
+          if git diff --staged --quiet; then
+            echo "변경 없음 — 커밋 스킵"
+          else
+            git commit -m "🏎️ Auto-update: F1 schedule data [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+            git push
+            echo "📤 Push 완료"
+          fi
