@@ -81,6 +81,37 @@ def extract_round(text: str) -> Optional[int]:
     return int(match.group(1)) if match else None
 
 
+def extract_location_from_title(title: str) -> str:
+    """풀 타이틀에서 지역/국가명만 추출 (Title Case).
+
+    예시:
+      "FORMULA 1 QATAR AIRWAYS AUSTRALIAN GRAND PRIX 2026" → "Australian"
+      "FORMULA 1 HEINEKEN SILVER LAS VEGAS GRAND PRIX 2026" → "Las Vegas"
+      "FORMULA 1 LENOVO JAPANESE GRAND PRIX 2026" → "Japanese"
+      "PRE-SEASON TESTING 2026" → "Pre-Season Testing"  (GRAND PRIX 없으면 원본 반환)
+    """
+    # "GRAND PRIX" 앞에 오는 단어(들)를 추출
+    match = re.search(r"FORMULA\s+1\s+.+?\s+((?:[A-Z]+\s+)+)GRAND\s+PRIX", title.upper())
+    if match:
+        # 스폰서명 제거: FORMULA 1 다음 단어들 중 지역명은 보통 마지막 1~3 단어
+        # 전략: "GRAND PRIX" 바로 앞 단어(들)를 뒤에서부터 취함
+        # 고유명사 지역은 1~3 단어 (e.g. "LAS VEGAS", "SAO PAULO", "AUSTRALIAN")
+        before_gp = match.group(1).strip().split()
+        # 스폰서(단일 단어 대문자)는 제거하고 지역명(1~3 단어) 취득
+        # 간단히: 마지막 단어가 형용사형(-AN, -ESE, -IAN)이면 1단어, 아니면 최대 2단어 취득
+        if len(before_gp) >= 1:
+            last = before_gp[-1]
+            if re.search(r"(AN|ESE|IAN|ISH|CH)$", last, re.IGNORECASE):
+                location = last.title()
+            elif len(before_gp) >= 2:
+                location = " ".join(before_gp[-2:]).title()
+            else:
+                location = last.title()
+            return location
+    # GRAND PRIX가 없는 경우 (Testing 등) → 원본을 Title Case로
+    return title.title()
+
+
 def parse_date_range_text(date_range_text: str, year: int = 2026) -> tuple[Optional[str], Optional[str]]:
     """
     Examples:
@@ -365,33 +396,42 @@ def parse_calendar() -> list[EventItem]:
         title = title_match.group(1) if title_match else text
         date_range_text = date_match.group(1) if date_match else ""
 
+        # 링크 텍스트 parts 예시:
+        # ["ROUND 4", "Chequered Flag", "Flag of Bahrain", "Bahrain", "FORMULA 1 ..."]
+        # ["ROUND 6", "NEXT RACE", "Flag of United States of America", "Miami", "FORMULA 1 ..."]
+        # "Flag of ..." 바로 다음 항목이 실제 지역명
         country = ""
+        location_title = ""
         parts = [clean_text(x) for x in a_tag.stripped_strings]
         for idx, part in enumerate(parts):
-            if part.upper().startswith("ROUND"):
-                if idx + 1 < len(parts):
-                    country = parts[idx + 1]
+            if part.startswith("Flag of ") and idx + 1 < len(parts):
+                location_title = parts[idx + 1]   # e.g. "Australia", "Las Vegas", "Miami"
+                country = parts[idx].replace("Flag of ", "")  # e.g. "Australia", "United States of America"
                 break
+        # location_title을 못 찾으면 country 기반으로 폴백
+        if not location_title:
+            for idx, part in enumerate(parts):
+                if part.upper().startswith("ROUND") and idx + 1 < len(parts):
+                    country = parts[idx + 1]
+                    location_title = country
+                    break
 
         if full_url in events_map:
-            # 기존에 저장된 데이터가 있을 경우, title이 FORMULA 1로 시작하거나 더 길면 교체
             existing = events_map[full_url]
             if not existing["round"] and round_no:
                 existing["round"] = round_no
             if not existing["country"] and country:
                 existing["country"] = country
+            if not existing["location_title"] and location_title:
+                existing["location_title"] = location_title
             if not existing["date_range_text"] and date_range_text:
                 existing["date_range_text"] = date_range_text
-            
-            if "FORMULA 1" in title.upper() and "FORMULA 1" not in existing["title"].upper():
-                existing["title"] = title
-            elif len(title) > len(existing["title"]):
-                existing["title"] = title
         else:
             events_map[full_url] = {
                 "round": round_no,
                 "event_type": "grand_prix",
                 "title": title,
+                "location_title": location_title,
                 "country": country,
                 "date_range_text": date_range_text,
                 "event_url": full_url,
@@ -439,7 +479,7 @@ def parse_calendar() -> list[EventItem]:
             EventItem(
                 round=data["round"],
                 event_type=data["event_type"],
-                title=data["title"],
+                title=data.get("location_title") or extract_location_from_title(data["title"]),
                 country=data["country"],
                 date_range_text=data["date_range_text"],
                 start_date_local=start_iso,
