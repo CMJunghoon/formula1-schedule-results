@@ -265,16 +265,17 @@ def parse_event_sessions(event_url: str) -> list[SessionItem]:
                 )
             )
 
-    # 중복 제거 (순서 유지)
-    unique_sessions = []
-    seen = set()
+    # 중복 제거 (순서 유지): 세션명(s.session) 기준
+    unique_sessions_dict = {}
     for s in sessions:
-        key = (s.session, s.start_datetime_local, s.end_datetime_local)
-        if key not in seen:
-            seen.add(key)
-            unique_sessions.append(s)
+        if s.session not in unique_sessions_dict:
+            unique_sessions_dict[s.session] = s
+        else:
+            # 기존 항목에 시간이 없고 새 항목에 시간이 있다면 교체 (혹시 모를 예외 방지)
+            if s.start_datetime_local and not unique_sessions_dict[s.session].start_datetime_local:
+                unique_sessions_dict[s.session] = s
 
-    return unique_sessions
+    return list(unique_sessions_dict.values())
 
 
 def _extract_driver_name(col) -> str:
