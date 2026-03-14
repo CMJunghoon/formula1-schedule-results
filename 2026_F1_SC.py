@@ -315,9 +315,9 @@ def get_session_results(result_url: str, session_name: str = "Race") -> Optional
         if not table:
             return None
 
-        is_practice = session_name.startswith("Practice") or session_name == "Sprint"
+        is_practice = session_name.startswith("Practice")
         is_qualifying = session_name in ("Qualifying", "Sprint Qualifying")
-        # 나머지는 Race
+        # 나머지는 Race, Sprint
 
         results: list[DriverResult] = []
         for row in table.select("tbody tr"):
@@ -504,13 +504,54 @@ def parse_calendar() -> list[EventItem]:
     return events
 
 
+def calculate_standings(events: list[EventItem]) -> tuple[list[dict], list[dict]]:
+    from collections import defaultdict
+    driver_pts = defaultdict(float)
+    driver_team = {}
+    team_pts = defaultdict(float)
+
+    for event in events:
+        for session in event.sessions:
+            if not session.results:
+                continue
+            for r in session.results:
+                if r.pts:
+                    try:
+                        p = float(r.pts)
+                    except ValueError:
+                        continue
+                    driver_pts[r.driver] += p
+                    if r.team:
+                        driver_team[r.driver] = r.team
+                        team_pts[r.team] += p
+
+    def format_pts(p: float) -> str:
+        return str(int(p)) if p.is_integer() else str(p)
+
+    driver_standings = [
+        {"position": i + 1, "driver": d, "team": driver_team.get(d, ""), "points": format_pts(p)}
+        for i, (d, p) in enumerate(sorted(driver_pts.items(), key=lambda x: x[1], reverse=True))
+    ]
+
+    team_standings = [
+        {"position": i + 1, "team": t, "points": format_pts(p)}
+        for i, (t, p) in enumerate(sorted(team_pts.items(), key=lambda x: x[1], reverse=True))
+    ]
+
+    return driver_standings, team_standings
+
+
 def main():
     events = parse_calendar()
+    
+    driver_standings, team_standings = calculate_standings(events)
 
     output = {
         "season": 2026,
         "calendar_url": CALENDAR_URL,
         "datetime_format": "local ISO 8601 without timezone offset",
+        "driver_standings": driver_standings,
+        "team_standings": team_standings,
         "events": [
             {
                 **{k: v for k, v in asdict(event).items() if k != "sessions"},
