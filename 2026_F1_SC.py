@@ -186,7 +186,7 @@ def parse_event_sessions(event_url: str) -> list[SessionItem]:
             elif href_lower.endswith("/qualifying"): result_links["Qualifying"] = full_url
             elif href_lower.endswith("/race-result"): result_links["Race"] = full_url
             elif href_lower.endswith("/sprint-qualifying"): result_links["Sprint Qualifying"] = full_url
-            elif href_lower.endswith("/sprint"): result_links["Sprint"] = full_url
+            elif href_lower.endswith("/sprint") or href_lower.endswith("/sprint-results"): result_links["Sprint"] = full_url
 
     # 텍스트 라인 단위로 나누기
     text_lines = [clean_text(line) for line in soup.get_text("\n").splitlines()]
@@ -268,6 +268,10 @@ def parse_event_sessions(event_url: str) -> list[SessionItem]:
     # 중복 제거 (순서 유지): 세션명(s.session) 기준
     unique_sessions_dict = {}
     for s in sessions:
+        # 시간 정보가 없는 경우(웹페이지 하단 하이라이트 등 잘못 파싱된 세션)는 제외
+        if s.start_datetime_local is None and s.end_datetime_local is None:
+            continue
+            
         if s.session not in unique_sessions_dict:
             unique_sessions_dict[s.session] = s
         else:
