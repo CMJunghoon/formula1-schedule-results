@@ -49,6 +49,7 @@ class EventItem:
     end_date_local: Optional[str]
     event_url: str
     cancellation_reason: Optional[str] = None
+    cancellation_reason_kr: Optional[str] = None
     sessions: list = None
 
     def __post_init__(self):
@@ -173,6 +174,24 @@ def to_iso_local(date_str: Optional[str], time_str: Optional[str]) -> Optional[s
     if not date_str or not time_str:
         return None
     return f"{date_str}T{time_str}:00"
+
+
+# 취소 사유 영→한 번역 매핑 (직접 번역)
+CANCELLATION_REASON_KR_MAP: dict[str, str] = {
+    "After careful evaluations, due to the ongoing situation in the Middle East region, the Bahrain and Saudi Arabian Grands Prix will not take place in April. While several alternatives were considered, it was ultimately decided that no substitutions will be made in April. The Formula 2, Formula 3 and F1 ACADEMY rounds will also not take place during their scheduled times. The decision has been taken in full consultation with the FIA and respective promoters.": (
+        "중동 지역의 지속적인 상황으로 인해 신중한 검토 끝에, 바레인 및 사우디아라비아 그랑프리는 4월에 개최되지 않습니다. "
+        "여러 대안이 검토되었으나 4월 중 대체 일정을 편성하지 않기로 최종 결정하였습니다. "
+        "포뮬러 2, 포뮬러 3, F1 아카데미 라운드 또한 예정된 일정에 열리지 않습니다. "
+        "이 결정은 FIA 및 각 프로모터와 충분한 협의를 거쳐 이루어졌습니다."
+    ),
+}
+
+
+def translate_cancellation_reason(reason: Optional[str]) -> Optional[str]:
+    """사전 정의된 매핑에서 한국어 번역을 반환. 없으면 None."""
+    if not reason:
+        return None
+    return CANCELLATION_REASON_KR_MAP.get(reason)
 
 
 def get_cancellation_reason(event_url: str) -> Optional[str]:
@@ -516,8 +535,10 @@ def parse_calendar() -> list[EventItem]:
             end_iso = f"{end_date}T23:59:59"
 
         cancellation_reason = None
+        cancellation_reason_kr = None
         if data.get("status") == "Cancelled":
             cancellation_reason = get_cancellation_reason(data["event_url"])
+            cancellation_reason_kr = translate_cancellation_reason(cancellation_reason)
 
         events.append(
             EventItem(
@@ -531,6 +552,7 @@ def parse_calendar() -> list[EventItem]:
                 end_date_local=end_iso,
                 event_url=data["event_url"],
                 cancellation_reason=cancellation_reason,
+                cancellation_reason_kr=cancellation_reason_kr,
                 sessions=parsed_sessions,
             )
         )
@@ -597,7 +619,7 @@ def main():
             {
                 **{
                     k: v for k, v in asdict(event).items()
-                    if k not in ("sessions",) and not (k == "cancellation_reason" and v is None)
+                    if k not in ("sessions",) and not (k in ("cancellation_reason", "cancellation_reason_kr") and v is None)
                 },
                 "sessions": [
                     {
