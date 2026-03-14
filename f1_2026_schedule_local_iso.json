@@ -1636,6 +1636,7 @@
       "start_date_local": "2026-04-10T00:00:00",
       "end_date_local": "2026-04-12T23:59:59",
       "event_url": "https://www.formula1.com/en/racing/2026/bahrain",
+      "cancellation_reason": "After careful evaluations, due to the ongoing situation in the Middle East region, the Bahrain and Saudi Arabian Grands Prix will not take place in April. While several alternatives were considered, it was ultimately decided that no substitutions will be made in April. The Formula 2, Formula 3 and F1 ACADEMY rounds will also not take place during their scheduled times. The decision has been taken in full consultation with the FIA and respective promoters.",
       "sessions": []
     },
     {
@@ -1648,6 +1649,7 @@
       "start_date_local": "2026-04-17T00:00:00",
       "end_date_local": "2026-04-19T23:59:59",
       "event_url": "https://www.formula1.com/en/racing/2026/saudi-arabia",
+      "cancellation_reason": "After careful evaluations, due to the ongoing situation in the Middle East region, the Bahrain and Saudi Arabian Grands Prix will not take place in April. While several alternatives were considered, it was ultimately decided that no substitutions will be made in April. The Formula 2, Formula 3 and F1 ACADEMY rounds will also not take place during their scheduled times. The decision has been taken in full consultation with the FIA and respective promoters.",
       "sessions": []
     },
     {

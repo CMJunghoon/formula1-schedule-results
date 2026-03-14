@@ -48,7 +48,12 @@ class EventItem:
     start_date_local: Optional[str]
     end_date_local: Optional[str]
     event_url: str
-    sessions: list[SessionItem]
+    cancellation_reason: Optional[str] = None
+    sessions: list = None
+
+    def __post_init__(self):
+        if self.sessions is None:
+            self.sessions = []
 
 
 MONTHS = {
@@ -168,6 +173,28 @@ def to_iso_local(date_str: Optional[str], time_str: Optional[str]) -> Optional[s
     if not date_str or not time_str:
         return None
     return f"{date_str}T{time_str}:00"
+
+
+def get_cancellation_reason(event_url: str) -> Optional[str]:
+    """취소된 이벤트 페이지에서 'IMPORTANT UPDATE' 다음에 오는 취소 사유 텍스트를 추출.
+    
+    HTML 구조:
+      IMPORTANT UPDATE\n<취소 사유 텍스트>\nREAD MORE
+    """
+    try:
+        soup = get_soup(event_url)
+        text_lines = [clean_text(l) for l in soup.get_text("\n").splitlines() if clean_text(l)]
+        for i, line in enumerate(text_lines):
+            if line.upper() == "IMPORTANT UPDATE":
+                # IMPORTANT UPDATE 바로 다음 라인이 취소 사유
+                if i + 1 < len(text_lines):
+                    reason = text_lines[i + 1]
+                    # "READ MORE" 같은 버튼 텍스트가 아닌 경우에만 반환
+                    if reason.upper() not in ("READ MORE", ""):
+                        return reason
+        return None
+    except Exception:
+        return None
 
 
 def parse_event_sessions(event_url: str) -> list[SessionItem]:
@@ -488,6 +515,10 @@ def parse_calendar() -> list[EventItem]:
         if not end_iso and end_date:
             end_iso = f"{end_date}T23:59:59"
 
+        cancellation_reason = None
+        if data.get("status") == "Cancelled":
+            cancellation_reason = get_cancellation_reason(data["event_url"])
+
         events.append(
             EventItem(
                 round=data["round"],
@@ -499,6 +530,7 @@ def parse_calendar() -> list[EventItem]:
                 start_date_local=start_iso,
                 end_date_local=end_iso,
                 event_url=data["event_url"],
+                cancellation_reason=cancellation_reason,
                 sessions=parsed_sessions,
             )
         )
@@ -563,7 +595,10 @@ def main():
         "team_standings": team_standings,
         "events": [
             {
-                **{k: v for k, v in asdict(event).items() if k != "sessions"},
+                **{
+                    k: v for k, v in asdict(event).items()
+                    if k not in ("sessions",) and not (k == "cancellation_reason" and v is None)
+                },
                 "sessions": [
                     {
                         **{k: v for k, v in asdict(session).items() if k != "results"},
