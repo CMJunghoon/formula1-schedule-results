@@ -40,6 +40,7 @@ class SessionItem:
 @dataclass
 class EventItem:
     round: Optional[int]
+    status: str
     event_type: str
     title: str
     country: str
@@ -363,6 +364,7 @@ def parse_calendar() -> list[EventItem]:
 
         full_url = urljoin(BASE_URL, href)
         text = clean_text(" ".join(a_tag.stripped_strings))
+        status = "Cancelled" if re.search(r'(Cancel|Called Off)', text, re.IGNORECASE) else "Scheduled"
 
         if "/en/racing/2026/pre-season-testing-" in href:
             title_match = re.search(r"(FORMULA 1 .*? 2026)", text)
@@ -374,9 +376,12 @@ def parse_calendar() -> list[EventItem]:
             if full_url in events_map:
                 if len(title) > len(events_map[full_url]["title"]):
                     events_map[full_url]["title"] = title
+                if status == "Cancelled":
+                    events_map[full_url]["status"] = "Cancelled"
             else:
                 events_map[full_url] = {
                     "round": None,
+                    "status": status,
                     "event_type": "testing",
                     "title": title,
                     "country": "Bahrain",
@@ -423,6 +428,8 @@ def parse_calendar() -> list[EventItem]:
 
         if full_url in events_map:
             existing = events_map[full_url]
+            if status == "Cancelled":
+                existing["status"] = "Cancelled"
             if not existing["round"] and round_no:
                 existing["round"] = round_no
             if not existing["country"] and country:
@@ -434,6 +441,7 @@ def parse_calendar() -> list[EventItem]:
         else:
             events_map[full_url] = {
                 "round": round_no,
+                "status": status,
                 "event_type": "grand_prix",
                 "title": title,
                 "location_title": location_title,
@@ -483,6 +491,7 @@ def parse_calendar() -> list[EventItem]:
         events.append(
             EventItem(
                 round=data["round"],
+                status=data["status"],
                 event_type=data["event_type"],
                 title=data.get("location_title") or extract_location_from_title(data["title"]),
                 country=data["country"],

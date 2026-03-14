@@ -196,6 +196,7 @@
   "events": [
     {
       "round": null,
+      "status": "Scheduled",
       "event_type": "testing",
       "title": "Formula 1 Aramco Pre-Season Testing 1 2026",
       "country": "Bahrain",
@@ -207,6 +208,7 @@
     },
     {
       "round": null,
+      "status": "Scheduled",
       "event_type": "testing",
       "title": "Formula 1 Aramco Pre-Season Testing 2 2026",
       "country": "Bahrain",
@@ -218,6 +220,7 @@
     },
     {
       "round": 1,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Australia",
       "country": "Australia",
@@ -933,6 +936,7 @@
     },
     {
       "round": 2,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "China",
       "country": "China",
@@ -1586,6 +1590,7 @@
     },
     {
       "round": 3,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Japan",
       "country": "Japan",
@@ -1623,80 +1628,31 @@
     },
     {
       "round": 4,
+      "status": "Cancelled",
       "event_type": "grand_prix",
       "title": "Bahrain",
       "country": "Bahrain",
       "date_range_text": "10 - 12 APR",
-      "start_date_local": "2026-04-10T11:30:00",
-      "end_date_local": "2026-04-12T17:00:00",
+      "start_date_local": "2026-04-10T00:00:00",
+      "end_date_local": "2026-04-12T23:59:59",
       "event_url": "https://www.formula1.com/en/racing/2026/bahrain",
-      "sessions": [
-        {
-          "session": "Practice 1",
-          "start_datetime_local": "2026-04-10T11:30:00",
-          "end_datetime_local": "2026-04-10T12:30:00"
-        },
-        {
-          "session": "Practice 2",
-          "start_datetime_local": "2026-04-10T15:00:00",
-          "end_datetime_local": "2026-04-10T16:00:00"
-        },
-        {
-          "session": "Practice 3",
-          "start_datetime_local": "2026-04-11T12:30:00",
-          "end_datetime_local": "2026-04-11T13:30:00"
-        },
-        {
-          "session": "Qualifying",
-          "start_datetime_local": "2026-04-11T16:00:00",
-          "end_datetime_local": "2026-04-11T17:00:00"
-        },
-        {
-          "session": "Race",
-          "start_datetime_local": "2026-04-12T15:00:00",
-          "end_datetime_local": "2026-04-12T17:00:00"
-        }
-      ]
+      "sessions": []
     },
     {
       "round": 5,
+      "status": "Cancelled",
       "event_type": "grand_prix",
       "title": "Saudi Arabia",
       "country": "Saudi Arabia",
       "date_range_text": "17 - 19 Apr",
-      "start_date_local": "2026-04-17T13:30:00",
-      "end_date_local": "2026-04-19T19:00:00",
+      "start_date_local": "2026-04-17T00:00:00",
+      "end_date_local": "2026-04-19T23:59:59",
       "event_url": "https://www.formula1.com/en/racing/2026/saudi-arabia",
-      "sessions": [
-        {
-          "session": "Practice 1",
-          "start_datetime_local": "2026-04-17T13:30:00",
-          "end_datetime_local": "2026-04-17T14:30:00"
-        },
-        {
-          "session": "Practice 2",
-          "start_datetime_local": "2026-04-17T17:00:00",
-          "end_datetime_local": "2026-04-17T18:00:00"
-        },
-        {
-          "session": "Practice 3",
-          "start_datetime_local": "2026-04-18T13:30:00",
-          "end_datetime_local": "2026-04-18T14:30:00"
-        },
-        {
-          "session": "Qualifying",
-          "start_datetime_local": "2026-04-18T17:00:00",
-          "end_datetime_local": "2026-04-18T18:00:00"
-        },
-        {
-          "session": "Race",
-          "start_datetime_local": "2026-04-19T17:00:00",
-          "end_datetime_local": "2026-04-19T19:00:00"
-        }
-      ]
+      "sessions": []
     },
     {
       "round": 6,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Miami",
       "country": "United States of America",
@@ -1734,6 +1690,7 @@
     },
     {
       "round": 7,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Canada",
       "country": "Canada",
@@ -1771,6 +1728,7 @@
     },
     {
       "round": 8,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Monaco",
       "country": "Monaco",
@@ -1808,6 +1766,7 @@
     },
     {
       "round": 9,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Barcelona-Catalunya",
       "country": "Spain",
@@ -1845,6 +1804,7 @@
     },
     {
       "round": 10,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Austria",
       "country": "Austria",
@@ -1882,6 +1842,7 @@
     },
     {
       "round": 11,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Great Britain",
       "country": "Great Britain",
@@ -1919,6 +1880,7 @@
     },
     {
       "round": 12,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Belgium",
       "country": "Belgium",
@@ -1956,6 +1918,7 @@
     },
     {
       "round": 13,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Hungary",
       "country": "Hungary",
@@ -1993,6 +1956,7 @@
     },
     {
       "round": 14,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Netherlands",
       "country": "Netherlands",
@@ -2030,6 +1994,7 @@
     },
     {
       "round": 15,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Italy",
       "country": "Italy",
@@ -2067,6 +2032,7 @@
     },
     {
       "round": 16,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Spain",
       "country": "Spain",
@@ -2104,6 +2070,7 @@
     },
     {
       "round": 17,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Azerbaijan",
       "country": "Azerbaijan",
@@ -2141,6 +2108,7 @@
     },
     {
       "round": 18,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Singapore",
       "country": "Singapore",
@@ -2178,6 +2146,7 @@
     },
     {
       "round": 19,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "United States",
       "country": "United States of America",
@@ -2215,6 +2184,7 @@
     },
     {
       "round": 20,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Mexico",
       "country": "Mexico",
@@ -2252,6 +2222,7 @@
     },
     {
       "round": 21,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Brazil",
       "country": "Brazil",
@@ -2289,6 +2260,7 @@
     },
     {
       "round": 22,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Las Vegas",
       "country": "United States of America",
@@ -2326,6 +2298,7 @@
     },
     {
       "round": 23,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Qatar",
       "country": "Qatar",
@@ -2363,6 +2336,7 @@
     },
     {
       "round": 24,
+      "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Abu Dhabi",
       "country": "United Arab Emirates",
