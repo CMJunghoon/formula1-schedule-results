@@ -95,47 +95,81 @@ def _safe_isnan(val) -> bool:
 
 
 def get_session_results(ff1_session) -> Optional[list]:
+    """FastF1 세션 객체에서 결과를 추출하여 dict 리스트로 반환."""
     try:
-        ff1_session.load(laps=False, telemetry=False, weather=False, messages=False)
+        sname = ff1_session.name  # FastF1 원래 이름
+        is_practice = sname in PRACTICE_SESSIONS
+        
+        # 프랙티스는 랩타입 수집을 위해 laps=True 필수
+        ff1_session.load(laps=is_practice, telemetry=False, weather=False, messages=False)
         results_df = ff1_session.results
-        if results_df is None or results_df.empty: return None
+        if results_df is None or results_df.empty:
+            return None
 
-        sname = ff1_session.name
         out = []
-        for _, row in results_df.iterrows():
-            pos_raw = row.get("Position")
-            if pos_raw is None or _safe_isnan(pos_raw):
-                pos = "NC"
-            else:
-                try: pos = str(int(float(pos_raw)))
-                except: pos = str(pos_raw)
 
-            first = str(row.get("FirstName") or "").strip()
-            last  = str(row.get("LastName") or "").strip()
-            driver = f"{first} {last}".strip() if first or last else str(row.get("FullName", ""))
-            team = str(row.get("TeamName") or "")
-
-            if sname in PRACTICE_SESSIONS:
-                time_val = row.get("Time")
-                gap_val  = row.get("Gap")
-                if not pd.isna(time_val) and hasattr(time_val, "total_seconds"):
-                    time_gap = td_to_laptime(time_val)
-                elif not pd.isna(gap_val) and hasattr(gap_val, "total_seconds"):
-                    time_gap = f"+{gap_val.total_seconds():.3f}s"
-                else:
-                    time_gap = ""
-                out.append({"pos": pos, "driver": driver, "team": team, "time_gap": time_gap})
-            elif sname in QUALIFYING_SESSIONS:
+        # 1) 프랙티스 세션: 랩타임 기반으로 순위 재계산 (결과 테이블에 시간이 없는 경우 대비)
+        if is_practice:
+            # 모든 드라이버의 가장 빠른 랩 추출
+            best_laps_list = []
+            for _, row in results_df.iterrows():
+                abbr = row.get("Abbreviation")
+                d_laps = ff1_session.laps.pick_driver(abbr)
+                if not d_laps.empty:
+                    fastest = d_laps.pick_fastest()
+                    if not pd.isna(fastest["LapTime"]):
+                        best_laps_list.append({
+                            "driver": f"{row['FirstName']} {row['LastName']}".strip(),
+                            "team": row.get("TeamName", ""),
+                            "lap_time": fastest["LapTime"]
+                        })
+            
+            # 랩타임 순으로 정렬
+            best_laps_list.sort(key=lambda x: x["lap_time"])
+            
+            for i, entry in enumerate(best_laps_list, 1):
                 out.append({
-                    "pos": pos, "driver": driver, "team": team,
+                    "pos": str(i),
+                    "driver": entry["driver"],
+                    "team": entry["team"],
+                    "time_gap": td_to_laptime(entry["lap_time"])
+                })
+            return out if out else None
+
+        # 2) 퀄리파잉 세션
+        elif sname in QUALIFYING_SESSIONS:
+            for _, row in results_df.iterrows():
+                pos_raw = row.get("Position")
+                pos = str(int(float(pos_raw))) if not _safe_isnan(pos_raw) else "NC"
+                
+                first = str(row.get("FirstName") or "").strip()
+                last  = str(row.get("LastName") or "").strip()
+                driver = f"{first} {last}".strip() if first or last else str(row.get("FullName", ""))
+                
+                out.append({
+                    "pos": pos,
+                    "driver": driver,
+                    "team": str(row.get("TeamName") or ""),
                     "q1": td_to_laptime(row.get("Q1")),
                     "q2": td_to_laptime(row.get("Q2")),
                     "q3": td_to_laptime(row.get("Q3")),
                 })
-            else:
+            return out if out else None
+
+        # 3) 기타 (Race, Sprint)
+        else:
+            for _, row in results_df.iterrows():
+                pos_raw = row.get("Position")
+                pos = str(int(float(pos_raw))) if not _safe_isnan(pos_raw) else "NC"
+                
+                first = str(row.get("FirstName") or "").strip()
+                last  = str(row.get("LastName") or "").strip()
+                driver = f"{first} {last}".strip() if first or last else str(row.get("FullName", ""))
+                
                 pts_raw = row.get("Points", 0)
                 try: pts_str = str(int(float(pts_raw))) if not _safe_isnan(pts_raw) else "0"
                 except: pts_str = str(pts_raw)
+                team = str(row.get("TeamName") or "")
                 out.append({"pos": pos, "driver": driver, "team": team, "pts": pts_str})
         return out if out else None
     except: return None
