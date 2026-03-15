@@ -117,7 +117,7 @@ def get_session_results(ff1_session) -> Optional[list]:
                 d_laps = ff1_session.laps.pick_driver(abbr)
                 if not d_laps.empty:
                     fastest = d_laps.pick_fastest()
-                    if not pd.isna(fastest["LapTime"]):
+                    if fastest is not None and not pd.isna(fastest.get("LapTime")):
                         best_laps_list.append({
                             "driver": f"{row['FirstName']} {row['LastName']}".strip(),
                             "team": row.get("TeamName", ""),

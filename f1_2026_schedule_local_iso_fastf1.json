@@ -359,12 +359,262 @@
         {
           "session": "Practice 2",
           "start_datetime_local": "2026-03-06T05:00:00",
-          "end_datetime_local": "2026-03-06T06:00:00"
+          "end_datetime_local": "2026-03-06T06:00:00",
+          "results": [
+            {
+              "pos": "1",
+              "driver": "Oscar Piastri",
+              "team": "McLaren",
+              "time_gap": "1:19.729"
+            },
+            {
+              "pos": "2",
+              "driver": "Kimi Antonelli",
+              "team": "Mercedes",
+              "time_gap": "1:19.943"
+            },
+            {
+              "pos": "3",
+              "driver": "George Russell",
+              "team": "Mercedes",
+              "time_gap": "1:20.049"
+            },
+            {
+              "pos": "4",
+              "driver": "Lewis Hamilton",
+              "team": "Ferrari",
+              "time_gap": "1:20.050"
+            },
+            {
+              "pos": "5",
+              "driver": "Charles Leclerc",
+              "team": "Ferrari",
+              "time_gap": "1:20.291"
+            },
+            {
+              "pos": "6",
+              "driver": "Max Verstappen",
+              "team": "Red Bull Racing",
+              "time_gap": "1:20.366"
+            },
+            {
+              "pos": "7",
+              "driver": "Lando Norris",
+              "team": "McLaren",
+              "time_gap": "1:20.794"
+            },
+            {
+              "pos": "8",
+              "driver": "Arvid Lindblad",
+              "team": "Racing Bulls",
+              "time_gap": "1:20.922"
+            },
+            {
+              "pos": "9",
+              "driver": "Isack Hadjar",
+              "team": "Red Bull Racing",
+              "time_gap": "1:20.941"
+            },
+            {
+              "pos": "10",
+              "driver": "Esteban Ocon",
+              "team": "Haas F1 Team",
+              "time_gap": "1:21.179"
+            },
+            {
+              "pos": "11",
+              "driver": "Oliver Bearman",
+              "team": "Haas F1 Team",
+              "time_gap": "1:21.326"
+            },
+            {
+              "pos": "12",
+              "driver": "Nico Hulkenberg",
+              "team": "Audi",
+              "time_gap": "1:21.351"
+            },
+            {
+              "pos": "13",
+              "driver": "Liam Lawson",
+              "team": "Racing Bulls",
+              "time_gap": "1:21.358"
+            },
+            {
+              "pos": "14",
+              "driver": "Gabriel Bortoleto",
+              "team": "Audi",
+              "time_gap": "1:21.668"
+            },
+            {
+              "pos": "15",
+              "driver": "Alexander Albon",
+              "team": "Williams",
+              "time_gap": "1:21.847"
+            },
+            {
+              "pos": "16",
+              "driver": "Pierre Gasly",
+              "team": "Alpine",
+              "time_gap": "1:22.167"
+            },
+            {
+              "pos": "17",
+              "driver": "Carlos Sainz",
+              "team": "Williams",
+              "time_gap": "1:22.253"
+            },
+            {
+              "pos": "18",
+              "driver": "Franco Colapinto",
+              "team": "Alpine",
+              "time_gap": "1:22.619"
+            },
+            {
+              "pos": "19",
+              "driver": "Valtteri Bottas",
+              "team": "Cadillac",
+              "time_gap": "1:23.660"
+            },
+            {
+              "pos": "20",
+              "driver": "Fernando Alonso",
+              "team": "Aston Martin",
+              "time_gap": "1:24.662"
+            },
+            {
+              "pos": "21",
+              "driver": "Lance Stroll",
+              "team": "Aston Martin",
+              "time_gap": "1:25.816"
+            }
+          ]
         },
         {
           "session": "Practice 3",
           "start_datetime_local": "2026-03-07T01:30:00",
-          "end_datetime_local": "2026-03-07T02:30:00"
+          "end_datetime_local": "2026-03-07T02:30:00",
+          "results": [
+            {
+              "pos": "1",
+              "driver": "George Russell",
+              "team": "Mercedes",
+              "time_gap": "1:19.053"
+            },
+            {
+              "pos": "2",
+              "driver": "Lewis Hamilton",
+              "team": "Ferrari",
+              "time_gap": "1:19.669"
+            },
+            {
+              "pos": "3",
+              "driver": "Charles Leclerc",
+              "team": "Ferrari",
+              "time_gap": "1:19.827"
+            },
+            {
+              "pos": "4",
+              "driver": "Oscar Piastri",
+              "team": "McLaren",
+              "time_gap": "1:20.087"
+            },
+            {
+              "pos": "5",
+              "driver": "Isack Hadjar",
+              "team": "Red Bull Racing",
+              "time_gap": "1:20.137"
+            },
+            {
+              "pos": "6",
+              "driver": "Max Verstappen",
+              "team": "Red Bull Racing",
+              "time_gap": "1:20.197"
+            },
+            {
+              "pos": "7",
+              "driver": "Kimi Antonelli",
+              "team": "Mercedes",
+              "time_gap": "1:20.324"
+            },
+            {
+              "pos": "8",
+              "driver": "Lando Norris",
+              "team": "McLaren",
+              "time_gap": "1:20.443"
+            },
+            {
+              "pos": "9",
+              "driver": "Gabriel Bortoleto",
+              "team": "Audi",
+              "time_gap": "1:20.459"
+            },
+            {
+              "pos": "10",
+              "driver": "Oliver Bearman",
+              "team": "Haas F1 Team",
+              "time_gap": "1:20.778"
+            },
+            {
+              "pos": "11",
+              "driver": "Arvid Lindblad",
+              "team": "Racing Bulls",
+              "time_gap": "1:20.838"
+            },
+            {
+              "pos": "12",
+              "driver": "Liam Lawson",
+              "team": "Racing Bulls",
+              "time_gap": "1:20.890"
+            },
+            {
+              "pos": "13",
+              "driver": "Esteban Ocon",
+              "team": "Haas F1 Team",
+              "time_gap": "1:20.983"
+            },
+            {
+              "pos": "14",
+              "driver": "Nico Hulkenberg",
+              "team": "Audi",
+              "time_gap": "1:21.067"
+            },
+            {
+              "pos": "15",
+              "driver": "Pierre Gasly",
+              "team": "Alpine",
+              "time_gap": "1:21.071"
+            },
+            {
+              "pos": "16",
+              "driver": "Franco Colapinto",
+              "team": "Alpine",
+              "time_gap": "1:21.413"
+            },
+            {
+              "pos": "17",
+              "driver": "Alexander Albon",
+              "team": "Williams",
+              "time_gap": "1:21.664"
+            },
+            {
+              "pos": "18",
+              "driver": "Fernando Alonso",
+              "team": "Aston Martin",
+              "time_gap": "1:22.720"
+            },
+            {
+              "pos": "19",
+              "driver": "Valtteri Bottas",
+              "team": "Cadillac",
+              "time_gap": "1:23.514"
+            },
+            {
+              "pos": "20",
+              "driver": "Sergio Perez",
+              "team": "Cadillac",
+              "time_gap": "1:24.397"
+            }
+          ]
         },
         {
           "session": "Qualifying",
