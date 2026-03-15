@@ -33,8 +33,17 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      # ── 3.5 FastF1 캐시 복구 ──────────────────────────────────────────
+      - name: Restore FastF1 cache
+        uses: actions/cache@v4
+        with:
+          path: .fastf1_cache
+          key: ${{ runner.os }}-fastf1-${{ hashFiles('**/2026_F1_SC_fastf1.py') }}
+          restore-keys: |
+            ${{ runner.os }}-fastf1-
+
       # ── 4. 세션 종료 후 30분 지났는지 확인 ───────────────────────────
-      #    아직 아무 세션도 끝나지 않았으면 스킵 (불필요한 스크래핑 방지)
+      #    아직 아무 세션도 끝나지 않았으면 스킵 (불필요한 실행 방지)
       - name: Check if any session ended within last 30 min
         id: check
         run: |
@@ -43,9 +52,13 @@ jobs:
           from datetime import datetime, timedelta, timezone
           from pathlib import Path
 
-          JSON_PATH = Path("f1_2026_schedule_local_iso.json")
+          JSON_PATH = Path("f1_2026_schedule_local_iso_fastf1.json")
           if not JSON_PATH.exists():
               print("no_json=true")
+              # 파일이 없으면 일단 실행하도록 설정
+              import os
+              with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+                  f.write("should_run=true\n")
               sys.exit(0)
 
           from zoneinfo import ZoneInfo
@@ -62,13 +75,21 @@ jobs:
                   end_str = session.get("end_datetime_local")
                   if not end_str:
                       continue
-                  end_kst = datetime.fromisoformat(end_str).replace(tzinfo=KST)
-                  end_utc = end_kst.astimezone(timezone.utc)
-                  trigger = end_utc + timedelta(minutes=30)
-                  if window_start <= trigger <= window_end:
-                      print(f"✅ 트리거 세션: {event.get('title','?')} / {session.get('session','?')}")
-                      found = True
-                      break
+                  # FastF1 버전은 UTC 타임이나 타임존 오프셋이 생략된 형태임
+                  # 기존 로직과 동일하게 처리하되 KST 타임으로 가정되던 부분을 확인
+                  try:
+                      end_dt = datetime.fromisoformat(end_str)
+                      # 기존 버전과 형식을 맞추기 위해 KST로 처리했던 로직 유지 (JSON 형식이 local ISO이므로)
+                      end_kst = end_dt.replace(tzinfo=KST)
+                      end_utc = end_kst.astimezone(timezone.utc)
+                      
+                      trigger = end_utc + timedelta(minutes=30)
+                      if window_start <= trigger <= window_end:
+                          print(f"✅ 트리거 세션: {event.get('title','?')} / {session.get('session','?')}")
+                          found = True
+                          break
+                  except:
+                      continue
               if found:
                   break
 
@@ -78,12 +99,12 @@ jobs:
               f.write(f"should_run={'true' if found else 'false'}\n")
           EOF
 
-      # ── 5. F1 스크래퍼 실행 (세션 종료 후 30분 윈도우에 해당할 때만) ─
-      - name: Run F1 scraper
+      # ── 5. F1 FastF1 스크립트 실행 ─────────────────────────────────────
+      - name: Run F1 FastF1 update
         if: steps.check.outputs.should_run == 'true' || github.event_name == 'workflow_dispatch'
         run: |
-          echo "🏎️ 스크래핑 시작: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
-          python3 2026_F1_SC.py
+          echo "🏎️ FastF1 업데이트 시작: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          python3 2026_F1_SC_fastf1.py
           echo "✅ 완료"
 
       # ── 6. JSON 변경 시 자동 커밋·푸시 ──────────────────────────────
@@ -92,12 +113,12 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add f1_2026_schedule_local_iso.json
+          git add f1_2026_schedule_local_iso_fastf1.json
           # 변경이 있을 때만 커밋
           if git diff --staged --quiet; then
             echo "변경 없음 — 커밋 스킵"
           else
-            git commit -m "🏎️ Auto-update: F1 schedule data [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+            git commit -m "🏎️ FastF1 Auto-update: F1 schedule data [$(date -u '+%Y-%m-%d %H:%M UTC')]"
             git push
             echo "📤 Push 완료"
           fi
