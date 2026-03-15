@@ -99,9 +99,11 @@ def get_session_results(ff1_session) -> Optional[list]:
     try:
         sname = ff1_session.name  # FastF1 원래 이름
         is_practice = sname in PRACTICE_SESSIONS
-        
-        # 프랙티스는 랩타입 수집을 위해 laps=True 필수
-        ff1_session.load(laps=is_practice, telemetry=False, weather=False, messages=False)
+        is_qualifying = sname in QUALIFYING_SESSIONS
+
+        # 프랙티스 및 퀄리파잉은 랩타임/기록 수집을 위해 laps=True 권장 (특히 Sprint Qualifying)
+        # 퀄리파잉 결과 계산에 Race Control Message가 필요할 수 있으므로 messages=is_qualifying 설정
+        ff1_session.load(laps=(is_practice or is_qualifying), telemetry=False, weather=False, messages=is_qualifying)
         results_df = ff1_session.results
         if results_df is None or results_df.empty:
             return None
