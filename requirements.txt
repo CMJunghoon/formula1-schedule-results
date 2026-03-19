@@ -2,3 +2,4 @@ requests
 beautifulsoup4
 fastf1
 pandas
+firebase-admin

@@ -22,6 +22,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # ── 1.5 Firebase 서비스 계정 키 설정 ──────────────────────────────
+      - name: Set up Firebase Service Account
+        run: echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}" > serviceAccountKey.json
+
       # ── 2. Python 설치 ────────────────────────────────────────────────
       - name: Set up Python
         uses: actions/setup-python@v5

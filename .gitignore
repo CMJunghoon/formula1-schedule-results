@@ -21,3 +21,9 @@ venv/
 # 임시 파일
 *.log
 nohup.out
+
+# Firebase
+serviceAccountKey.json
+
+# FastF1 Cache
+.fastf1_cache/

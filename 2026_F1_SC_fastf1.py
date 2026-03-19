@@ -15,6 +15,11 @@ from typing import Optional
 
 import pandas as pd
 import fastf1
+from firebase_manager import FirebaseManager
+
+# ── 전역 플레이어 데이터 저장소 ──────────────────────────────────────────
+# { "First_Last": { ...player info... } }
+all_players_data = {}
 
 # ── 캐시 설정 ─────────────────────────────────────────────────────────────────
 CACHE_DIR = os.path.join(os.path.dirname(__file__), ".fastf1_cache")
@@ -136,6 +141,24 @@ def get_session_results(ff1_session) -> Optional[list]:
                     "team": entry["team"],
                     "time_gap": td_to_laptime(entry["lap_time"])
                 })
+            
+            # 선수 정보 수집 (프랙티스는 FirstName/LastName이 직접 결과에 없을 수 있으나 로직상 가능)
+            # 하지만 상세 정보는 결과 테이블(results_df)에서 직접 가져오는 게 정확함
+            for _, row in results_df.iterrows():
+                fname = row.get("FirstName")
+                lname = row.get("LastName")
+                if pd.isna(fname) or pd.isna(lname): continue
+                key = f"{fname}_{lname}"
+                if key not in all_players_data:
+                    all_players_data[key] = {
+                        "firstname": fname,
+                        "lastname": lname,
+                        "shortname": row.get("Abbreviation", ""),
+                        "team": row.get("TeamName", ""),
+                        "team_color": f"#{row.get('TeamColor', 'FFFFFF')}",
+                        "driver_number": str(row.get("Number", ""))
+                    }
+
             return out if out else None
 
         # 2) 퀄리파잉 세션
@@ -156,6 +179,21 @@ def get_session_results(ff1_session) -> Optional[list]:
                     "q2": td_to_laptime(row.get("Q2")),
                     "q3": td_to_laptime(row.get("Q3")),
                 })
+
+                # 선수 정보 수집
+                fname = row.get("FirstName")
+                lname = row.get("LastName")
+                if not pd.isna(fname) and not pd.isna(lname):
+                    key = f"{fname}_{lname}"
+                    if key not in all_players_data:
+                        all_players_data[key] = {
+                            "firstname": fname,
+                            "lastname": lname,
+                            "shortname": row.get("Abbreviation", ""),
+                            "team": row.get("TeamName", ""),
+                            "team_color": f"#{row.get('TeamColor', 'FFFFFF')}",
+                            "driver_number": str(row.get("Number", ""))
+                        }
             return out if out else None
 
         # 3) 기타 (Race, Sprint)
@@ -173,6 +211,21 @@ def get_session_results(ff1_session) -> Optional[list]:
                 except: pts_str = str(pts_raw)
                 team = str(row.get("TeamName") or "")
                 out.append({"pos": pos, "driver": driver, "team": team, "pts": pts_str})
+
+                # 선수 정보 수집
+                fname = row.get("FirstName")
+                lname = row.get("LastName")
+                if not pd.isna(fname) and not pd.isna(lname):
+                    key = f"{fname}_{lname}"
+                    if key not in all_players_data:
+                        all_players_data[key] = {
+                            "firstname": fname,
+                            "lastname": lname,
+                            "shortname": row.get("Abbreviation", ""),
+                            "team": row.get("TeamName", ""),
+                            "team_color": f"#{row.get('TeamColor', 'FFFFFF')}",
+                            "driver_number": str(row.get("Number", ""))
+                        }
         return out if out else None
     except: return None
 
@@ -340,6 +393,26 @@ def main():
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print(f"\n✅ {len(events)}개 이벤트를 {out_file}에 저장했습니다.")
+
+    # ── Firestore 업로드 ──
+    try:
+        print("\n[INFO] Firestore 업로드 시작...")
+        fm = FirebaseManager()
+        
+        # 1. 선수 정보 업로드
+        if all_players_data:
+            fm.upload_players(list(all_players_data.values()))
+        
+        # 2. 순위 정보 업로드
+        fm.upload_standings(SEASON, d_standings, t_standings)
+        
+        # 3. 이벤트 및 세션 정보 업로드
+        fm.upload_events(events)
+        
+        print("\n🚀 Firestore 업로드 작업이 모두 완료되었습니다.")
+    except Exception as e:
+        print(f"\n❌ Firestore 업로드 중 오류 발생: {e}")
+        print("참고: 'serviceAccountKey.json' 파일이 프로젝트 루트에 필요합니다.")
 
 
 if __name__ == "__main__":
