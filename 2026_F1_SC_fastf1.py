@@ -54,8 +54,8 @@ SESSION_DURATION = {
 PRACTICE_SESSIONS   = {"Practice 1", "Practice 2", "Practice 3"}
 QUALIFYING_SESSIONS = {"Qualifying", "Sprint Qualifying", "Sprint Shootout"}
 
-# 취소된 라운드 정보 (RoundNumber 기준)
-CANCELLED_ROUNDS = {4, 5}
+# 취소된 라운드 정보 (수동 추가되므로 빈 집합으로 설정)
+CANCELLED_ROUNDS = set()
 
 # 취소 사유
 CANCELLATION_REASON_RAW = (
@@ -297,7 +297,7 @@ def parse_all_events() -> list:
         status = "Scheduled"
         c_reason = None
         c_reason_kr = None
-        if round_no in CANCELLED_ROUNDS:
+        if round_no and int(round_no) in CANCELLED_ROUNDS:
             status = "Cancelled"
             c_reason = CANCELLATION_REASON_RAW
             c_reason_kr = CANCELLATION_REASON_KR
