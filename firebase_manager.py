@@ -78,6 +78,11 @@ class FirebaseManager:
             event_data = {k: v for k, v in event.items() if k != 'sessions'}
             event_ref.set(event_data)
             
+            # 하위 sessions 컬렉션을 비우고 새로 업로드 (잘못된 세션 정보가 남지 않도록)
+            old_sessions = event_ref.collection('sessions').stream()
+            for ds in old_sessions:
+                ds.reference.delete()
+            
             # 하위 sessions 컬렉션 업로드
             sessions = event.get('sessions', [])
             for session in sessions:
