@@ -216,7 +216,7 @@
       "round": 1,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "Australia",
+      "title": "Australian Grand Prix",
       "country": "Australia",
       "date_range_text": "06 - 08 MAR",
       "start_date_local": "2026-03-06T01:30:00",
@@ -944,7 +944,7 @@
       "round": 2,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "China",
+      "title": "Chinese Grand Prix",
       "country": "China",
       "date_range_text": "13 - 15 MAR",
       "start_date_local": "2026-03-13T03:30:00",
@@ -1740,7 +1740,7 @@
       "round": 3,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "Japan",
+      "title": "Japanese Grand Prix",
       "country": "Japan",
       "date_range_text": "27 - 29 MAR",
       "start_date_local": "2026-03-27T02:30:00",
@@ -1778,12 +1778,12 @@
       "round": 4,
       "status": "Cancelled",
       "event_type": "grand_prix",
-      "title": "United States",
-      "country": "United States",
-      "date_range_text": "",
-      "start_date_local": "2026-05-03T00:00:00",
-      "end_date_local": null,
-      "event_url": "https://www.formula1.com/en/racing/2026/miami-gardens",
+      "title": "Bahrain Grand Prix",
+      "country": "Bahrain",
+      "date_range_text": "10 - 12 APR",
+      "start_date_local": "2026-04-10T00:00:00",
+      "end_date_local": "2026-04-12T00:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/Bahrain",
       "cancellation_reason": "After careful evaluations, due to the ongoing situation in the Middle East region, the Bahrain and Saudi Arabian Grands Prix will not take place in April. While several alternatives were considered, it was ultimately decided that no substitutions will be made in April. The Formula 2, Formula 3 and F1 ACADEMY rounds will also not take place during their scheduled times. The decision has been taken in full consultation with the FIA and respective promoters.",
       "cancellation_reason_kr": "중동 지역의 지속적인 상황으로 인해 신중한 검토 끝에, 바레인 및 사우디아라비아 그랑프리는 4월에 개최되지 않습니다. 여러 대안이 검토되었으나 4월 중 대체 일정을 편성하지 않기로 최종 결정하였습니다. 포뮬러 2, 포뮬러 3, F1 아카데미 라운드 또한 예정된 일정에 열리지 않습니다. 이 결정은 FIA 및 각 프로모터와 충분한 협의를 거쳐 이루어졌습니다.",
       "sessions": []
@@ -1792,12 +1792,12 @@
       "round": 5,
       "status": "Cancelled",
       "event_type": "grand_prix",
-      "title": "Canada",
-      "country": "Canada",
-      "date_range_text": "",
-      "start_date_local": "2026-05-24T00:00:00",
-      "end_date_local": null,
-      "event_url": "https://www.formula1.com/en/racing/2026/montréal",
+      "title": "Saudi Arabian Grand Prix",
+      "country": "Saudi Arabia",
+      "date_range_text": "17 - 19 APR",
+      "start_date_local": "2026-04-17T00:00:00",
+      "end_date_local": "2026-04-19T00:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/Saudi_Arabia",
       "cancellation_reason": "After careful evaluations, due to the ongoing situation in the Middle East region, the Bahrain and Saudi Arabian Grands Prix will not take place in April. While several alternatives were considered, it was ultimately decided that no substitutions will be made in April. The Formula 2, Formula 3 and F1 ACADEMY rounds will also not take place during their scheduled times. The decision has been taken in full consultation with the FIA and respective promoters.",
       "cancellation_reason_kr": "중동 지역의 지속적인 상황으로 인해 신중한 검토 끝에, 바레인 및 사우디아라비아 그랑프리는 4월에 개최되지 않습니다. 여러 대안이 검토되었으나 4월 중 대체 일정을 편성하지 않기로 최종 결정하였습니다. 포뮬러 2, 포뮬러 3, F1 아카데미 라운드 또한 예정된 일정에 열리지 않습니다. 이 결정은 FIA 및 각 프로모터와 충분한 협의를 거쳐 이루어졌습니다.",
       "sessions": []
@@ -1806,7 +1806,83 @@
       "round": 6,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "Monaco",
+      "title": "Miami Grand Prix",
+      "country": "United States",
+      "date_range_text": "01 - 03 MAY",
+      "start_date_local": "2026-05-01T16:30:00",
+      "end_date_local": "2026-05-03T22:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/miami-gardens",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-05-01T16:30:00",
+          "end_datetime_local": "2026-05-01T17:30:00"
+        },
+        {
+          "session": "Sprint Qualifying",
+          "start_datetime_local": "2026-05-01T20:30:00",
+          "end_datetime_local": "2026-05-01T21:14:00"
+        },
+        {
+          "session": "Sprint",
+          "start_datetime_local": "2026-05-02T16:00:00",
+          "end_datetime_local": "2026-05-02T16:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-05-02T20:00:00",
+          "end_datetime_local": "2026-05-02T21:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-05-03T20:00:00",
+          "end_datetime_local": "2026-05-03T22:00:00"
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "status": "Scheduled",
+      "event_type": "grand_prix",
+      "title": "Canadian Grand Prix",
+      "country": "Canada",
+      "date_range_text": "22 - 24 MAY",
+      "start_date_local": "2026-05-22T16:30:00",
+      "end_date_local": "2026-05-24T22:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/montréal",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-05-22T16:30:00",
+          "end_datetime_local": "2026-05-22T17:30:00"
+        },
+        {
+          "session": "Sprint Qualifying",
+          "start_datetime_local": "2026-05-22T20:30:00",
+          "end_datetime_local": "2026-05-22T21:14:00"
+        },
+        {
+          "session": "Sprint",
+          "start_datetime_local": "2026-05-23T16:00:00",
+          "end_datetime_local": "2026-05-23T16:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-05-23T20:00:00",
+          "end_datetime_local": "2026-05-23T21:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-05-24T20:00:00",
+          "end_datetime_local": "2026-05-24T22:00:00"
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "status": "Scheduled",
+      "event_type": "grand_prix",
+      "title": "Monaco Grand Prix",
       "country": "Monaco",
       "date_range_text": "05 - 07 JUN",
       "start_date_local": "2026-06-05T11:30:00",
@@ -1841,10 +1917,10 @@
       ]
     },
     {
-      "round": 7,
+      "round": 9,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "Spain",
+      "title": "Barcelona Grand Prix",
       "country": "Spain",
       "date_range_text": "12 - 14 JUN",
       "start_date_local": "2026-06-12T11:30:00",
@@ -1879,10 +1955,10 @@
       ]
     },
     {
-      "round": 8,
+      "round": 10,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "Austria",
+      "title": "Austrian Grand Prix",
       "country": "Austria",
       "date_range_text": "26 - 28 JUN",
       "start_date_local": "2026-06-26T11:30:00",
@@ -1917,10 +1993,10 @@
       ]
     },
     {
-      "round": 9,
+      "round": 11,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "United Kingdom",
+      "title": "British Grand Prix",
       "country": "United Kingdom",
       "date_range_text": "03 - 05 JUL",
       "start_date_local": "2026-07-03T11:30:00",
@@ -1955,10 +2031,10 @@
       ]
     },
     {
-      "round": 10,
+      "round": 12,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "Belgium",
+      "title": "Belgian Grand Prix",
       "country": "Belgium",
       "date_range_text": "17 - 19 JUL",
       "start_date_local": "2026-07-17T11:30:00",
@@ -1993,10 +2069,10 @@
       ]
     },
     {
-      "round": 11,
+      "round": 13,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "Hungary",
+      "title": "Hungarian Grand Prix",
       "country": "Hungary",
       "date_range_text": "24 - 26 JUL",
       "start_date_local": "2026-07-24T11:30:00",
@@ -2031,10 +2107,10 @@
       ]
     },
     {
-      "round": 12,
+      "round": 14,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "Netherlands",
+      "title": "Dutch Grand Prix",
       "country": "Netherlands",
       "date_range_text": "21 - 23 AUG",
       "start_date_local": "2026-08-21T10:30:00",
@@ -2069,10 +2145,10 @@
       ]
     },
     {
-      "round": 13,
+      "round": 15,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "Italy",
+      "title": "Italian Grand Prix",
       "country": "Italy",
       "date_range_text": "04 - 06 SEP",
       "start_date_local": "2026-09-04T10:30:00",
@@ -2107,10 +2183,10 @@
       ]
     },
     {
-      "round": 14,
+      "round": 16,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "Spain",
+      "title": "Spanish Grand Prix",
       "country": "Spain",
       "date_range_text": "11 - 13 SEP",
       "start_date_local": "2026-09-11T11:30:00",
@@ -2145,10 +2221,10 @@
       ]
     },
     {
-      "round": 15,
+      "round": 17,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "Azerbaijan",
+      "title": "Azerbaijan Grand Prix",
       "country": "Azerbaijan",
       "date_range_text": "24 - 26 SEP",
       "start_date_local": "2026-09-24T08:30:00",
@@ -2183,10 +2259,10 @@
       ]
     },
     {
-      "round": 16,
+      "round": 18,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "Singapore",
+      "title": "Singapore Grand Prix",
       "country": "Singapore",
       "date_range_text": "09 - 11 OCT",
       "start_date_local": "2026-10-09T08:30:00",
@@ -2221,10 +2297,10 @@
       ]
     },
     {
-      "round": 17,
+      "round": 19,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "United States",
+      "title": "United States Grand Prix",
       "country": "United States",
       "date_range_text": "23 - 25 OCT",
       "start_date_local": "2026-10-23T17:30:00",
@@ -2259,10 +2335,10 @@
       ]
     },
     {
-      "round": 18,
+      "round": 20,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "Mexico",
+      "title": "Mexico City Grand Prix",
       "country": "Mexico",
       "date_range_text": "30 OCT - 01 NOV",
       "start_date_local": "2026-10-30T18:30:00",
@@ -2297,10 +2373,10 @@
       ]
     },
     {
-      "round": 19,
+      "round": 21,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "Brazil",
+      "title": "São Paulo Grand Prix",
       "country": "Brazil",
       "date_range_text": "06 - 08 NOV",
       "start_date_local": "2026-11-06T15:30:00",
@@ -2335,10 +2411,10 @@
       ]
     },
     {
-      "round": 20,
+      "round": 22,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "United States",
+      "title": "Las Vegas Grand Prix",
       "country": "United States",
       "date_range_text": "20 - 22 NOV",
       "start_date_local": "2026-11-20T00:30:00",
@@ -2373,10 +2449,10 @@
       ]
     },
     {
-      "round": 21,
+      "round": 23,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "Qatar",
+      "title": "Qatar Grand Prix",
       "country": "Qatar",
       "date_range_text": "27 - 29 NOV",
       "start_date_local": "2026-11-27T13:30:00",
@@ -2411,10 +2487,10 @@
       ]
     },
     {
-      "round": 22,
+      "round": 24,
       "status": "Scheduled",
       "event_type": "grand_prix",
-      "title": "United Arab Emirates",
+      "title": "Abu Dhabi Grand Prix",
       "country": "United Arab Emirates",
       "date_range_text": "04 - 06 DEC",
       "start_date_local": "2026-12-04T09:30:00",

@@ -284,6 +284,13 @@ def parse_all_events() -> list:
 
     for _, event_row in schedule.iterrows():
         round_no = event_row.get("RoundNumber")
+        if round_no is not None and not pd.isna(round_no):
+            round_no = int(round_no)
+            # 2026 시즌 FastF1 특이사항: 취소된 바레인/사우디(4,5라운드)가 리스트에서 제외됨
+            # 4번 이상 라운드를 +2 오프셋 처리하여 정규 일정을 유지함
+            if round_no >= 4:
+                round_no += 2
+        
         event_name = str(event_row.get("EventName", "")).strip()
         country = str(event_row.get("Country", "")).strip()
         location = str(event_row.get("Location", "")).strip()
@@ -299,7 +306,9 @@ def parse_all_events() -> list:
             c_reason = CANCELLATION_REASON_RAW
             c_reason_kr = CANCELLATION_REASON_KR
 
-        display_title = country if not is_testing else event_name
+        # title에 국가명 대신 공식 이벤트명(예: Australian Grand Prix)을 사용함
+        display_title = event_name
+        if not display_title: display_title = country
         if not display_title: display_title = location
 
         sessions_out = []
@@ -371,6 +380,44 @@ def parse_all_events() -> list:
         evt["sessions"] = sessions_out
         events_out.append(evt)
         print(f"  [OK] {display_title} (Round {evt['round']})")
+
+    # ── 취소된 라운드 수동 추가 (FastF1에서 제외된 경우 대비) ──────────────────
+    round_nums = [e.get("round") for e in events_out if e.get("round") is not None]
+    if 4 not in round_nums:
+        print("  [ADD] Round 4 (Bahrain) manually...")
+        events_out.append({
+            "round": 4,
+            "status": "Cancelled",
+            "event_type": "grand_prix",
+            "title": "Bahrain Grand Prix",
+            "country": "Bahrain",
+            "date_range_text": "10 - 12 APR",
+            "start_date_local": "2026-04-10T00:00:00",
+            "end_date_local": "2026-04-12T00:00:00",
+            "event_url": f"https://www.formula1.com/en/racing/{SEASON}/Bahrain",
+            "cancellation_reason": CANCELLATION_REASON_RAW,
+            "cancellation_reason_kr": CANCELLATION_REASON_KR,
+            "sessions": []
+        })
+    if 5 not in round_nums:
+        print("  [ADD] Round 5 (Saudi Arabia) manually...")
+        events_out.append({
+            "round": 5,
+            "status": "Cancelled",
+            "event_type": "grand_prix",
+            "title": "Saudi Arabian Grand Prix",
+            "country": "Saudi Arabia",
+            "date_range_text": "17 - 19 APR",
+            "start_date_local": "2026-04-17T00:00:00",
+            "end_date_local": "2026-04-19T00:00:00",
+            "event_url": f"https://www.formula1.com/en/racing/{SEASON}/Saudi_Arabia",
+            "cancellation_reason": CANCELLATION_REASON_RAW,
+            "cancellation_reason_kr": CANCELLATION_REASON_KR,
+            "sessions": []
+        })
+
+    # 라운드 순으로 정렬 (Testing은 None이므로 맨 앞으로)
+    events_out.sort(key=lambda x: (x["round"] if x["round"] is not None else -1))
 
     return events_out
 
