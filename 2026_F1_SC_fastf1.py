@@ -286,10 +286,6 @@ def parse_all_events() -> list:
         round_no = event_row.get("RoundNumber")
         if round_no is not None and not pd.isna(round_no):
             round_no = int(round_no)
-            # 2026 시즌 FastF1 특이사항: 취소된 바레인/사우디(4,5라운드)가 리스트에서 제외됨
-            # 4번 이상 라운드를 +2 오프셋 처리하여 정규 일정을 유지함
-            if round_no >= 4:
-                round_no += 2
         
         event_name = str(event_row.get("EventName", "")).strip()
         country = str(event_row.get("Country", "")).strip()
@@ -381,12 +377,13 @@ def parse_all_events() -> list:
         events_out.append(evt)
         print(f"  [OK] {display_title} (Round {evt['round']})")
 
-    # ── 취소된 라운드 수동 추가 (FastF1에서 제외된 경우 대비) ──────────────────
-    round_nums = [e.get("round") for e in events_out if e.get("round") is not None]
-    if 4 not in round_nums:
-        print("  [ADD] Round 4 (Bahrain) manually...")
+    # ── 취소된 라운드 수동 추가 (라운드 번호 없이 추가) ────────────────────────
+    # 사용자 요청: 취소된 경기는 라운드 번호를 붙이지 않음
+    event_titles = [e.get("title") for e in events_out]
+    if "Bahrain Grand Prix" not in event_titles:
+        print("  [ADD] Bahrain Grand Prix (No Round)...")
         events_out.append({
-            "round": 4,
+            "round": None,
             "status": "Cancelled",
             "event_type": "grand_prix",
             "title": "Bahrain Grand Prix",
@@ -399,10 +396,10 @@ def parse_all_events() -> list:
             "cancellation_reason_kr": CANCELLATION_REASON_KR,
             "sessions": []
         })
-    if 5 not in round_nums:
-        print("  [ADD] Round 5 (Saudi Arabia) manually...")
+    if "Saudi Arabian Grand Prix" not in event_titles:
+        print("  [ADD] Saudi Arabian Grand Prix (No Round)...")
         events_out.append({
-            "round": 5,
+            "round": None,
             "status": "Cancelled",
             "event_type": "grand_prix",
             "title": "Saudi Arabian Grand Prix",
@@ -416,8 +413,12 @@ def parse_all_events() -> list:
             "sessions": []
         })
 
-    # 라운드 순으로 정렬 (Testing은 None이므로 맨 앞으로)
-    events_out.sort(key=lambda x: (x["round"] if x["round"] is not None else -1))
+    # 날짜 순으로 정렬 (start_date_local 기반)
+    def sort_key(x):
+        d = x.get("start_date_local")
+        return d if d else "9999-12-31"
+
+    events_out.sort(key=sort_key)
 
     return events_out
 

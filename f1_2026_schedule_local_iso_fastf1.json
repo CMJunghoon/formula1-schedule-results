@@ -1775,7 +1775,7 @@
       ]
     },
     {
-      "round": 4,
+      "round": null,
       "status": "Cancelled",
       "event_type": "grand_prix",
       "title": "Bahrain Grand Prix",
@@ -1789,7 +1789,7 @@
       "sessions": []
     },
     {
-      "round": 5,
+      "round": null,
       "status": "Cancelled",
       "event_type": "grand_prix",
       "title": "Saudi Arabian Grand Prix",
@@ -1803,83 +1803,35 @@
       "sessions": []
     },
     {
-      "round": 6,
-      "status": "Scheduled",
+      "round": 4,
+      "status": "Cancelled",
       "event_type": "grand_prix",
       "title": "Miami Grand Prix",
       "country": "United States",
-      "date_range_text": "01 - 03 MAY",
-      "start_date_local": "2026-05-01T16:30:00",
-      "end_date_local": "2026-05-03T22:00:00",
+      "date_range_text": "",
+      "start_date_local": "2026-05-03T00:00:00",
+      "end_date_local": null,
       "event_url": "https://www.formula1.com/en/racing/2026/miami-gardens",
-      "sessions": [
-        {
-          "session": "Practice 1",
-          "start_datetime_local": "2026-05-01T16:30:00",
-          "end_datetime_local": "2026-05-01T17:30:00"
-        },
-        {
-          "session": "Sprint Qualifying",
-          "start_datetime_local": "2026-05-01T20:30:00",
-          "end_datetime_local": "2026-05-01T21:14:00"
-        },
-        {
-          "session": "Sprint",
-          "start_datetime_local": "2026-05-02T16:00:00",
-          "end_datetime_local": "2026-05-02T16:30:00"
-        },
-        {
-          "session": "Qualifying",
-          "start_datetime_local": "2026-05-02T20:00:00",
-          "end_datetime_local": "2026-05-02T21:00:00"
-        },
-        {
-          "session": "Race",
-          "start_datetime_local": "2026-05-03T20:00:00",
-          "end_datetime_local": "2026-05-03T22:00:00"
-        }
-      ]
+      "cancellation_reason": "After careful evaluations, due to the ongoing situation in the Middle East region, the Bahrain and Saudi Arabian Grands Prix will not take place in April. While several alternatives were considered, it was ultimately decided that no substitutions will be made in April. The Formula 2, Formula 3 and F1 ACADEMY rounds will also not take place during their scheduled times. The decision has been taken in full consultation with the FIA and respective promoters.",
+      "cancellation_reason_kr": "중동 지역의 지속적인 상황으로 인해 신중한 검토 끝에, 바레인 및 사우디아라비아 그랑프리는 4월에 개최되지 않습니다. 여러 대안이 검토되었으나 4월 중 대체 일정을 편성하지 않기로 최종 결정하였습니다. 포뮬러 2, 포뮬러 3, F1 아카데미 라운드 또한 예정된 일정에 열리지 않습니다. 이 결정은 FIA 및 각 프로모터와 충분한 협의를 거쳐 이루어졌습니다.",
+      "sessions": []
     },
     {
-      "round": 7,
-      "status": "Scheduled",
+      "round": 5,
+      "status": "Cancelled",
       "event_type": "grand_prix",
       "title": "Canadian Grand Prix",
       "country": "Canada",
-      "date_range_text": "22 - 24 MAY",
-      "start_date_local": "2026-05-22T16:30:00",
-      "end_date_local": "2026-05-24T22:00:00",
+      "date_range_text": "",
+      "start_date_local": "2026-05-24T00:00:00",
+      "end_date_local": null,
       "event_url": "https://www.formula1.com/en/racing/2026/montréal",
-      "sessions": [
-        {
-          "session": "Practice 1",
-          "start_datetime_local": "2026-05-22T16:30:00",
-          "end_datetime_local": "2026-05-22T17:30:00"
-        },
-        {
-          "session": "Sprint Qualifying",
-          "start_datetime_local": "2026-05-22T20:30:00",
-          "end_datetime_local": "2026-05-22T21:14:00"
-        },
-        {
-          "session": "Sprint",
-          "start_datetime_local": "2026-05-23T16:00:00",
-          "end_datetime_local": "2026-05-23T16:30:00"
-        },
-        {
-          "session": "Qualifying",
-          "start_datetime_local": "2026-05-23T20:00:00",
-          "end_datetime_local": "2026-05-23T21:00:00"
-        },
-        {
-          "session": "Race",
-          "start_datetime_local": "2026-05-24T20:00:00",
-          "end_datetime_local": "2026-05-24T22:00:00"
-        }
-      ]
+      "cancellation_reason": "After careful evaluations, due to the ongoing situation in the Middle East region, the Bahrain and Saudi Arabian Grands Prix will not take place in April. While several alternatives were considered, it was ultimately decided that no substitutions will be made in April. The Formula 2, Formula 3 and F1 ACADEMY rounds will also not take place during their scheduled times. The decision has been taken in full consultation with the FIA and respective promoters.",
+      "cancellation_reason_kr": "중동 지역의 지속적인 상황으로 인해 신중한 검토 끝에, 바레인 및 사우디아라비아 그랑프리는 4월에 개최되지 않습니다. 여러 대안이 검토되었으나 4월 중 대체 일정을 편성하지 않기로 최종 결정하였습니다. 포뮬러 2, 포뮬러 3, F1 아카데미 라운드 또한 예정된 일정에 열리지 않습니다. 이 결정은 FIA 및 각 프로모터와 충분한 협의를 거쳐 이루어졌습니다.",
+      "sessions": []
     },
     {
-      "round": 8,
+      "round": 6,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Monaco Grand Prix",
@@ -1917,7 +1869,7 @@
       ]
     },
     {
-      "round": 9,
+      "round": 7,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Barcelona Grand Prix",
@@ -1955,7 +1907,7 @@
       ]
     },
     {
-      "round": 10,
+      "round": 8,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Austrian Grand Prix",
@@ -1993,7 +1945,7 @@
       ]
     },
     {
-      "round": 11,
+      "round": 9,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "British Grand Prix",
@@ -2031,7 +1983,7 @@
       ]
     },
     {
-      "round": 12,
+      "round": 10,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Belgian Grand Prix",
@@ -2069,7 +2021,7 @@
       ]
     },
     {
-      "round": 13,
+      "round": 11,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Hungarian Grand Prix",
@@ -2107,7 +2059,7 @@
       ]
     },
     {
-      "round": 14,
+      "round": 12,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Dutch Grand Prix",
@@ -2145,7 +2097,7 @@
       ]
     },
     {
-      "round": 15,
+      "round": 13,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Italian Grand Prix",
@@ -2183,7 +2135,7 @@
       ]
     },
     {
-      "round": 16,
+      "round": 14,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Spanish Grand Prix",
@@ -2221,7 +2173,7 @@
       ]
     },
     {
-      "round": 17,
+      "round": 15,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Azerbaijan Grand Prix",
@@ -2259,7 +2211,7 @@
       ]
     },
     {
-      "round": 18,
+      "round": 16,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Singapore Grand Prix",
@@ -2297,7 +2249,7 @@
       ]
     },
     {
-      "round": 19,
+      "round": 17,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "United States Grand Prix",
@@ -2335,7 +2287,7 @@
       ]
     },
     {
-      "round": 20,
+      "round": 18,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Mexico City Grand Prix",
@@ -2373,7 +2325,7 @@
       ]
     },
     {
-      "round": 21,
+      "round": 19,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "São Paulo Grand Prix",
@@ -2411,7 +2363,7 @@
       ]
     },
     {
-      "round": 22,
+      "round": 20,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Las Vegas Grand Prix",
@@ -2449,7 +2401,7 @@
       ]
     },
     {
-      "round": 23,
+      "round": 21,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Qatar Grand Prix",
@@ -2487,7 +2439,7 @@
       ]
     },
     {
-      "round": 24,
+      "round": 22,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Abu Dhabi Grand Prix",
