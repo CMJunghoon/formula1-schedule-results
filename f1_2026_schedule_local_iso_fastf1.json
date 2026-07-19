@@ -4683,7 +4683,185 @@
         {
           "session": "Qualifying",
           "start_datetime_local": "2026-07-18T14:00:00",
-          "end_datetime_local": "2026-07-18T15:00:00"
+          "end_datetime_local": "2026-07-18T15:00:00",
+          "results": [
+            {
+              "pos": "1",
+              "driver": "Andrea Kimi Antonelli",
+              "team": "Mercedes",
+              "q1": "1:46.304",
+              "q2": "1:45.142",
+              "q3": "1:44.361"
+            },
+            {
+              "pos": "2",
+              "driver": "Max Verstappen",
+              "team": "Red Bull",
+              "q1": "1:45.930",
+              "q2": "1:45.589",
+              "q3": "1:44.678"
+            },
+            {
+              "pos": "3",
+              "driver": "Lando Norris",
+              "team": "McLaren",
+              "q1": "1:45.865",
+              "q2": "1:45.454",
+              "q3": "1:44.801"
+            },
+            {
+              "pos": "4",
+              "driver": "George Russell",
+              "team": "Mercedes",
+              "q1": "1:46.185",
+              "q2": "1:45.689",
+              "q3": "1:44.869"
+            },
+            {
+              "pos": "5",
+              "driver": "Charles Leclerc",
+              "team": "Ferrari",
+              "q1": "1:46.278",
+              "q2": "1:45.397",
+              "q3": "1:44.893"
+            },
+            {
+              "pos": "6",
+              "driver": "Lewis Hamilton",
+              "team": "Ferrari",
+              "q1": "1:46.124",
+              "q2": "1:45.543",
+              "q3": "1:44.895"
+            },
+            {
+              "pos": "7",
+              "driver": "Oscar Piastri",
+              "team": "McLaren",
+              "q1": "1:46.433",
+              "q2": "1:45.671",
+              "q3": "1:45.016"
+            },
+            {
+              "pos": "8",
+              "driver": "Arvid Lindblad",
+              "team": "RB F1 Team",
+              "q1": "1:46.191",
+              "q2": "1:45.629",
+              "q3": "1:45.143"
+            },
+            {
+              "pos": "9",
+              "driver": "Gabriel Bortoleto",
+              "team": "Audi",
+              "q1": "1:46.609",
+              "q2": "1:46.082",
+              "q3": "1:45.628"
+            },
+            {
+              "pos": "10",
+              "driver": "Isack Hadjar",
+              "team": "Red Bull",
+              "q1": "1:46.062",
+              "q2": "1:45.823",
+              "q3": ""
+            },
+            {
+              "pos": "11",
+              "driver": "Liam Lawson",
+              "team": "RB F1 Team",
+              "q1": "1:46.501",
+              "q2": "1:46.120",
+              "q3": ""
+            },
+            {
+              "pos": "12",
+              "driver": "Pierre Gasly",
+              "team": "Alpine F1 Team",
+              "q1": "1:46.679",
+              "q2": "1:46.331",
+              "q3": ""
+            },
+            {
+              "pos": "13",
+              "driver": "Franco Colapinto",
+              "team": "Alpine F1 Team",
+              "q1": "1:46.795",
+              "q2": "1:46.392",
+              "q3": ""
+            },
+            {
+              "pos": "14",
+              "driver": "Nico Hülkenberg",
+              "team": "Audi",
+              "q1": "1:46.893",
+              "q2": "1:46.671",
+              "q3": ""
+            },
+            {
+              "pos": "15",
+              "driver": "Carlos Sainz",
+              "team": "Williams",
+              "q1": "1:47.080",
+              "q2": "1:46.777",
+              "q3": ""
+            },
+            {
+              "pos": "16",
+              "driver": "Oliver Bearman",
+              "team": "Haas F1 Team",
+              "q1": "1:47.113",
+              "q2": "1:46.779",
+              "q3": ""
+            },
+            {
+              "pos": "17",
+              "driver": "Alexander Albon",
+              "team": "Williams",
+              "q1": "1:47.120",
+              "q2": "",
+              "q3": ""
+            },
+            {
+              "pos": "18",
+              "driver": "Esteban Ocon",
+              "team": "Haas F1 Team",
+              "q1": "1:47.801",
+              "q2": "",
+              "q3": ""
+            },
+            {
+              "pos": "19",
+              "driver": "Valtteri Bottas",
+              "team": "Cadillac F1 Team",
+              "q1": "1:47.823",
+              "q2": "",
+              "q3": ""
+            },
+            {
+              "pos": "20",
+              "driver": "Sergio Pérez",
+              "team": "Cadillac F1 Team",
+              "q1": "1:47.971",
+              "q2": "",
+              "q3": ""
+            },
+            {
+              "pos": "21",
+              "driver": "Fernando Alonso",
+              "team": "Aston Martin",
+              "q1": "1:50.002",
+              "q2": "",
+              "q3": ""
+            },
+            {
+              "pos": "22",
+              "driver": "Lance Stroll",
+              "team": "Aston Martin",
+              "q1": "1:50.177",
+              "q2": "",
+              "q3": ""
+            }
+          ]
         },
         {
           "session": "Race",
