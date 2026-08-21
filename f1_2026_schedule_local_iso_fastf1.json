@@ -5,51 +5,51 @@
   "driver_standings": [
     {
       "position": 1,
-      "driver": "Lewis Hamilton",
-      "team": "Ferrari",
-      "points": "159"
+      "driver": "Andrea Kimi Antonelli",
+      "team": "Mercedes",
+      "points": "172"
     },
     {
       "position": 2,
-      "driver": "Andrea Kimi Antonelli",
-      "team": "Mercedes",
-      "points": "157"
+      "driver": "Lewis Hamilton",
+      "team": "Ferrari",
+      "points": "169"
     },
     {
       "position": 3,
       "driver": "George Russell",
       "team": "Mercedes",
-      "points": "154"
+      "points": "160"
     },
     {
       "position": 4,
       "driver": "Charles Leclerc",
       "team": "Ferrari",
-      "points": "126"
+      "points": "138"
     },
     {
       "position": 5,
       "driver": "Lando Norris",
       "team": "McLaren",
-      "points": "103"
+      "points": "128"
     },
     {
       "position": 6,
+      "driver": "Max Verstappen",
+      "team": "Red Bull",
+      "points": "109"
+    },
+    {
+      "position": 7,
       "driver": "Oscar Piastri",
       "team": "McLaren",
       "points": "92"
     },
     {
-      "position": 7,
-      "driver": "Max Verstappen",
-      "team": "Red Bull",
-      "points": "91"
-    },
-    {
       "position": 8,
       "driver": "Isack Hadjar",
       "team": "Red Bull",
-      "points": "60"
+      "points": "68"
     },
     {
       "position": 9,
@@ -59,21 +59,21 @@
     },
     {
       "position": 10,
+      "driver": "Liam Lawson",
+      "team": "RB F1 Team",
+      "points": "43"
+    },
+    {
+      "position": 11,
       "driver": "Pierre Gasly",
       "team": "Alpine F1 Team",
       "points": "42"
     },
     {
-      "position": 11,
-      "driver": "Liam Lawson",
-      "team": "RB F1 Team",
-      "points": "39"
-    },
-    {
       "position": 12,
       "driver": "Arvid Lindblad",
       "team": "RB F1 Team",
-      "points": "22"
+      "points": "23"
     },
     {
       "position": 13,
@@ -113,37 +113,37 @@
     },
     {
       "position": 19,
+      "driver": "Nico Hülkenberg",
+      "team": "Audi",
+      "points": "2"
+    },
+    {
+      "position": 20,
       "driver": "Fernando Alonso",
       "team": "Aston Martin",
       "points": "1"
     },
     {
-      "position": 20,
+      "position": 21,
       "driver": "Sergio Perez",
       "team": "Cadillac",
       "points": "0"
     },
     {
-      "position": 21,
+      "position": 22,
       "driver": "Lance Stroll",
       "team": "Aston Martin",
       "points": "0"
     },
     {
-      "position": 22,
+      "position": 23,
       "driver": "Valtteri Bottas",
       "team": "Cadillac F1 Team",
       "points": "0"
     },
     {
-      "position": 23,
-      "driver": "Nico Hulkenberg",
-      "team": "Audi",
-      "points": "0"
-    },
-    {
       "position": 24,
-      "driver": "Nico Hülkenberg",
+      "driver": "Nico Hulkenberg",
       "team": "Audi",
       "points": "0"
     },
@@ -158,32 +158,32 @@
     {
       "position": 1,
       "team": "Mercedes",
-      "points": "358"
+      "points": "379"
     },
     {
       "position": 2,
       "team": "Ferrari",
-      "points": "285"
+      "points": "307"
     },
     {
       "position": 3,
       "team": "McLaren",
-      "points": "195"
+      "points": "220"
     },
     {
       "position": 4,
       "team": "Red Bull",
-      "points": "139"
+      "points": "165"
     },
     {
       "position": 5,
-      "team": "Alpine F1 Team",
-      "points": "51"
+      "team": "RB F1 Team",
+      "points": "54"
     },
     {
       "position": 6,
-      "team": "RB F1 Team",
-      "points": "49"
+      "team": "Alpine F1 Team",
+      "points": "51"
     },
     {
       "position": 7,
@@ -202,13 +202,13 @@
     },
     {
       "position": 10,
-      "team": "Williams",
-      "points": "11"
+      "team": "Audi",
+      "points": "12"
     },
     {
       "position": 11,
-      "team": "Audi",
-      "points": "10"
+      "team": "Williams",
+      "points": "11"
     },
     {
       "position": 12,
@@ -2128,20 +2128,6 @@
       "round": null,
       "status": "Cancelled",
       "event_type": "grand_prix",
-      "title": "Bahrain Grand Prix",
-      "country": "Bahrain",
-      "date_range_text": "10 - 12 APR",
-      "start_date_local": "2026-04-10T00:00:00",
-      "end_date_local": "2026-04-12T00:00:00",
-      "event_url": "https://www.formula1.com/en/racing/2026/Bahrain",
-      "cancellation_reason": "After careful evaluations, due to the ongoing situation in the Middle East region, the Bahrain and Saudi Arabian Grands Prix will not take place in April. While several alternatives were considered, it was ultimately decided that no substitutions will be made in April. The Formula 2, Formula 3 and F1 ACADEMY rounds will also not take place during their scheduled times. The decision has been taken in full consultation with the FIA and respective promoters.",
-      "cancellation_reason_kr": "중동 지역의 지속적인 상황으로 인해 신중한 검토 끝에, 바레인 및 사우디아라비아 그랑프리는 4월에 개최되지 않습니다. 여러 대안이 검토되었으나 4월 중 대체 일정을 편성하지 않기로 최종 결정하였습니다. 포뮬러 2, 포뮬러 3, F1 아카데미 라운드 또한 예정된 일정에 열리지 않습니다. 이 결정은 FIA 및 각 프로모터와 충분한 협의를 거쳐 이루어졌습니다.",
-      "sessions": []
-    },
-    {
-      "round": null,
-      "status": "Cancelled",
-      "event_type": "grand_prix",
       "title": "Saudi Arabian Grand Prix",
       "country": "Saudi Arabia",
       "date_range_text": "17 - 19 APR",
@@ -2490,8 +2476,8 @@
               "driver": "Isack Hadjar",
               "team": "Red Bull",
               "q1": "",
-              "q2": "1:28.941",
-              "q3": "1:28.789"
+              "q2": "",
+              "q3": ""
             }
           ]
         },
@@ -5216,7 +5202,141 @@
         {
           "session": "Race",
           "start_datetime_local": "2026-07-26T13:00:00",
-          "end_datetime_local": "2026-07-26T15:00:00"
+          "end_datetime_local": "2026-07-26T15:00:00",
+          "results": [
+            {
+              "pos": "1",
+              "driver": "Lando Norris",
+              "team": "McLaren",
+              "pts": "25"
+            },
+            {
+              "pos": "2",
+              "driver": "Max Verstappen",
+              "team": "Red Bull",
+              "pts": "18"
+            },
+            {
+              "pos": "3",
+              "driver": "Andrea Kimi Antonelli",
+              "team": "Mercedes",
+              "pts": "15"
+            },
+            {
+              "pos": "4",
+              "driver": "Charles Leclerc",
+              "team": "Ferrari",
+              "pts": "12"
+            },
+            {
+              "pos": "5",
+              "driver": "Lewis Hamilton",
+              "team": "Ferrari",
+              "pts": "10"
+            },
+            {
+              "pos": "6",
+              "driver": "Isack Hadjar",
+              "team": "Red Bull",
+              "pts": "8"
+            },
+            {
+              "pos": "7",
+              "driver": "George Russell",
+              "team": "Mercedes",
+              "pts": "6"
+            },
+            {
+              "pos": "8",
+              "driver": "Liam Lawson",
+              "team": "RB F1 Team",
+              "pts": "4"
+            },
+            {
+              "pos": "9",
+              "driver": "Nico Hülkenberg",
+              "team": "Audi",
+              "pts": "2"
+            },
+            {
+              "pos": "10",
+              "driver": "Arvid Lindblad",
+              "team": "RB F1 Team",
+              "pts": "1"
+            },
+            {
+              "pos": "11",
+              "driver": "Gabriel Bortoleto",
+              "team": "Audi",
+              "pts": "0"
+            },
+            {
+              "pos": "12",
+              "driver": "Pierre Gasly",
+              "team": "Alpine F1 Team",
+              "pts": "0"
+            },
+            {
+              "pos": "13",
+              "driver": "Lance Stroll",
+              "team": "Aston Martin",
+              "pts": "0"
+            },
+            {
+              "pos": "14",
+              "driver": "Fernando Alonso",
+              "team": "Aston Martin",
+              "pts": "0"
+            },
+            {
+              "pos": "15",
+              "driver": "Franco Colapinto",
+              "team": "Alpine F1 Team",
+              "pts": "0"
+            },
+            {
+              "pos": "16",
+              "driver": "Esteban Ocon",
+              "team": "Haas F1 Team",
+              "pts": "0"
+            },
+            {
+              "pos": "17",
+              "driver": "Alexander Albon",
+              "team": "Williams",
+              "pts": "0"
+            },
+            {
+              "pos": "18",
+              "driver": "Carlos Sainz",
+              "team": "Williams",
+              "pts": "0"
+            },
+            {
+              "pos": "19",
+              "driver": "Oliver Bearman",
+              "team": "Haas F1 Team",
+              "pts": "0"
+            },
+            {
+              "pos": "20",
+              "driver": "Oscar Piastri",
+              "team": "McLaren",
+              "pts": "0"
+            },
+            {
+              "pos": "21",
+              "driver": "Sergio Pérez",
+              "team": "Cadillac F1 Team",
+              "pts": "0"
+            },
+            {
+              "pos": "22",
+              "driver": "Valtteri Bottas",
+              "team": "Cadillac F1 Team",
+              "pts": "0"
+            }
+          ]
         }
       ]
     },
@@ -5376,6 +5496,44 @@
       "round": 16,
       "status": "Scheduled",
       "event_type": "grand_prix",
+      "title": "Bahrain Grand Prix",
+      "country": "Bahrain",
+      "date_range_text": "02 - 04 OCT",
+      "start_date_local": "2026-10-02T04:30:00",
+      "end_date_local": "2026-10-04T09:00:00",
+      "event_url": "https://www.formula1.com/en/racing/2026/kuala-lumpur",
+      "sessions": [
+        {
+          "session": "Practice 1",
+          "start_datetime_local": "2026-10-02T04:30:00",
+          "end_datetime_local": "2026-10-02T05:30:00"
+        },
+        {
+          "session": "Practice 2",
+          "start_datetime_local": "2026-10-02T08:00:00",
+          "end_datetime_local": "2026-10-02T09:00:00"
+        },
+        {
+          "session": "Practice 3",
+          "start_datetime_local": "2026-10-03T04:30:00",
+          "end_datetime_local": "2026-10-03T05:30:00"
+        },
+        {
+          "session": "Qualifying",
+          "start_datetime_local": "2026-10-03T08:00:00",
+          "end_datetime_local": "2026-10-03T09:00:00"
+        },
+        {
+          "session": "Race",
+          "start_datetime_local": "2026-10-04T07:00:00",
+          "end_datetime_local": "2026-10-04T09:00:00"
+        }
+      ]
+    },
+    {
+      "round": 17,
+      "status": "Scheduled",
+      "event_type": "grand_prix",
       "title": "Singapore Grand Prix",
       "country": "Singapore",
       "date_range_text": "09 - 11 OCT",
@@ -5411,7 +5569,7 @@
       ]
     },
     {
-      "round": 17,
+      "round": 18,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "United States Grand Prix",
@@ -5449,7 +5607,7 @@
       ]
     },
     {
-      "round": 18,
+      "round": 19,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Mexico City Grand Prix",
@@ -5487,7 +5645,7 @@
       ]
     },
     {
-      "round": 19,
+      "round": 20,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "São Paulo Grand Prix",
@@ -5525,7 +5683,7 @@
       ]
     },
     {
-      "round": 20,
+      "round": 21,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Las Vegas Grand Prix",
@@ -5563,7 +5721,7 @@
       ]
     },
     {
-      "round": 21,
+      "round": 22,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Qatar Grand Prix",
@@ -5601,7 +5759,7 @@
       ]
     },
     {
-      "round": 22,
+      "round": 23,
       "status": "Scheduled",
       "event_type": "grand_prix",
       "title": "Abu Dhabi Grand Prix",
